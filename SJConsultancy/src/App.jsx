@@ -1,47 +1,33 @@
-<<<<<<< HEAD
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Blogs from './components/Blogs';  // Your Blogs page component
-import BlogDetails from './pages/BlogDetails';  // Your Blog details page component
-import Home from './components/Home';  
 
-function App() {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/:id" element={<BlogDetails />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
-=======
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Homepage from './components/Home';
+import Blogs from './components/Blogs';
+import BlogDetails from './pages/BlogDetails';
 import Register from './components/Register';
 import Login from './components/Login';
-import Footer from './components/Footer';
 import UserProfile from './components/User';
+import BookingPage from './pages/BookingPage';
 
-const App = () => {
+function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<UserProfile />} />
+        <Route path="/booking" element={<BookingPage />} />
       </Routes>
       <Footer />
     </Router>
   );
-};
+}
 
 export default App;
->>>>>>> 8b6dd5f6c4bbcdd23ff879c53a7a374479bcb934

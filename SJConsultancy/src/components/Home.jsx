@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const Home = () => {
-  return (
-    <div>
-      <h1>Welcome to the Home Page!</h1>
-      <p>This is where you can find the latest updates and news.</p>
-      <p>Stay tuned for more content!</p>
-=======
-// Homepage.jsx
-import React from 'react';
-
-const Homepage = () => {
   return (
     <div>
       {/* Logo Section */}
@@ -47,13 +36,8 @@ const Homepage = () => {
         <h2>News & Updates</h2>
         <p>Stay tuned for the latest news and announcements from S.J Consultancy.</p>
       </section>
->>>>>>> 8b6dd5f6c4bbcdd23ff879c53a7a374479bcb934
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Home;
-=======
-export default Homepage;
->>>>>>> 8b6dd5f6c4bbcdd23ff879c53a7a374479bcb934
