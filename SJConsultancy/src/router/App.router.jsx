@@ -1,11 +1,9 @@
-import React from 'react';
-import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Blogs from './components/Blogs';  // Your Blogs page component
-import BlogDetails from './pages/BlogDetails';  // Your Blog details page component
-import Home from './components/Home';  
+import Home from '../pages/Home';
+import Blogs from '../pages/Blogs';
+import BlogDetails from '../pages/BlogDetails';
 
-function App() {
+const AppRouter = () => {
   return (
     <Router>
       <Routes>
@@ -15,6 +13,6 @@ function App() {
       </Routes>
     </Router>
   );
-}
+};
 
-export default App;
+export default AppRouter;
