@@ -533,34 +533,56 @@ section p {
 }
 
 /* Services Section */
-.bg-lightGray {
+.services-section {
   background-color: #F5F5F5; /* Light Grey */
 }
 
-.space-y-8 > div {
-  background-color: #FFFFFF; /* White */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.service-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.space-y-8 > div:hover {
+.service-container:hover {
   transform: translateY(-5px);
+  background-color: #dad8cc;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.space-y-8 h3 {
-  font-size: 1.75rem;
+@media (min-width: 768px) {
+  .service-container {
+    flex-direction: row; /* Horizontal layout for larger screens */
+  }
+
+  .service-container:nth-child(even) {
+    flex-direction: row-reverse; /* Alternate layout for even containers */
+  }
+}
+
+.service-text h3 {
+  font-size: 2rem;
   font-weight: bold;
   color: #003366; /* Navy Blue */
   margin-bottom: 15px;
 }
 
-.space-y-8 p {
-  font-size: 1rem;
+.service-text p {
+  font-size: 1.125rem;
   color: #555555; /* Medium Grey */
-  line-height: 1.6;
+  line-height: 1.8;
+}
+
+.service-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 100%; /* Rounded/Circular images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-image {
+  border-radius: 50%; /* Circular images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Why Choose Us Section */
@@ -571,7 +593,6 @@ section p {
 }
 
 .grid > div {
-  background-color: #FFFFFF; /* White */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -639,4 +660,279 @@ section p {
   .grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* Testimonial Section */
+.testimonials-section {
+  
+  padding: 60px 20px;
+}
+
+.testimonial {
+  background-color: #FFFFFF; /* White */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555555; /* Medium Grey */
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.testimonial h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-top: 15px;
+}
+/* Why Choose Us and Testimonials Section */
+.why-testimonials-section {
+  background-image: url('/choose.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  color: #FFFFFF; /* White text for better contrast */
+}
+
+.why-choose-us h2,
+.testimonials h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 20px;
+}
+
+.why-choose-us h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #f5f5f5; /* Deep Green */
+  margin-bottom: 10px;
+}
+
+.why-choose-us p,
+.testimonials p {
+  font-size: 1rem;
+  color: #d8cccc; /* Medium Grey */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.testimonials h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 20px;
+}
+/* Case Studies Section */
+.case-studies-section {
+  background-color: #F5F5F5; /* Light Grey */
+  padding: 60px 20px;
+}
+
+.case-study {
+  background-color: #FFFFFF; /* White */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.case-study img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.case-study h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1c1e20; /* Navy Blue */
+  margin-bottom: 10px;
+}
+
+.case-study p {
+  font-size: 1rem;
+  color: #555555; /* Medium Grey */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.case-study a {
+  font-size: 1rem;
+  color: #1c1e20; /* Deep Green */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.case-study a:hover {
+  color: #1c1e20; /* Teal */
+  text-decoration: underline;
+}
+
+/* FAQs Section */
+.faqs-section {
+  background-color: #F5F5F5;
+  height: 100%; /* Ensures it matches the height of the Contact Us section */
+  max-height: 450px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border-radius: 30px;
+  padding-right: 10px; /* Add padding for better scrolling experience */
+}
+
+.faqs-section::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.faqs-section::-webkit-scrollbar-thumb {
+  background-color: #005F56; /* Deep Green */
+  border-radius: 4px; /* Rounded scrollbar */
+}
+
+.faqs-section::-webkit-scrollbar-thumb:hover {
+  background-color: #008080; /* Teal */
+}
+
+.faqs-section::-webkit-scrollbar-track {
+  background-color: #F5F5F5; /* Light Grey */
+}
+/* FAQs and Contact Us Section */
+.faqs-contact-section {
+  background-color: #F5F5F5; /* Light Grey */
+  padding: 60px 20px;
+}
+.faqs-contact-section:hover {
+  background-color: #dad8cc; /* Slightly darker Light Grey */
+}
+
+.faqs-section h2,
+.contact-us-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 20px;
+}
+
+.faqs-section .faq-item,
+.contact-us-section {
+  background-color: #FFFFFF; /* White */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.faqs-section .faq-item h3 {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faqs-section .faq-item h3:hover {
+  color: #005F56; /* Deep Green */
+}
+
+.faqs-section .faq-item p {
+  font-size: 1rem;
+  color: #555555; /* Medium Grey */
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+/* Contact Us Form */
+.contact-us-section form input,
+.contact-us-section form textarea {
+  font-size: 1rem;
+  color: #333333; /* Dark Grey */
+  border: 1px solid #CCCCCC; /* Light Grey */
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-us-section form input:focus,
+.contact-us-section form textarea:focus {
+  outline: none;
+  border-color: #005F56; /* Deep Green */
+  box-shadow: 0 0 5px rgba(0, 95, 86, 0.5);
+}
+
+.contact-us-section form button {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-us-section form button:hover {
+  background-color: #008080; /* Teal */
+}
+/* Latest Events and Blog Section */
+.latest-events-blog-section {
+  background-color: #FFFFFF; /* White background */
+  padding: 60px 20px;
+}
+
+.event-blog-item {
+  background-color: #F5F5F5; /* Light Grey */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.event-blog-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.event-blog-item img {
+  transition: transform 0.3s ease;
+}
+
+.event-blog-item:hover img {
+  transform: scale(1.1); /* Zoom in effect */
+}
+
+.event-blog-item h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.event-blog-item p {
+  font-size: 1rem;
+  color: #555555; /* Medium Grey */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.event-blog-item a {
+  font-size: 1rem;
+  color: #005F56; /* Deep Green */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.event-blog-item a:hover {
+  color: #008080; /* Teal */
+  text-decoration: underline;
 }
