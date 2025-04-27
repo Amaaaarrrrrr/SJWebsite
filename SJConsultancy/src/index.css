@@ -878,20 +878,20 @@ section p {
 /* FAQs Section */
 .faqs-section {
   background-color: #F5F5F5;
-  height: 100%; /* Ensures it matches the height of the Contact Us section */
-  max-height: 450px; /* Set a fixed height */
+  height: 680px; /* Ensures it matches the height of the Contact Us section */
+  max-height: 900px; /* Set a fixed height */
   overflow-y: auto; /* Enable vertical scrolling */
-  border-radius: 30px;
-  padding-right: 10px; /* Add padding for better scrolling experience */
+  border-radius: 20px; /* Slightly smaller radius for a modern look */
+  padding: 15px; /* Increased padding for better spacing */
 }
 
 .faqs-section::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
+  width: 10px; /* Slightly wider scrollbar */
 }
 
 .faqs-section::-webkit-scrollbar-thumb {
   background-color: #005F56; /* Deep Green */
-  border-radius: 4px; /* Rounded scrollbar */
+  border-radius: 5px; /* Rounded scrollbar */
 }
 
 .faqs-section::-webkit-scrollbar-thumb:hover {
@@ -899,35 +899,36 @@ section p {
 }
 
 .faqs-section::-webkit-scrollbar-track {
-  background-color: #F5F5F5; /* Light Grey */
-}
-/* FAQs and Contact Us Section */
-.faqs-contact-section {
-  background-color: #F5F5F5; /* Light Grey */
-  padding: 60px 20px;
-}
-.faqs-contact-section:hover {
-  background-color: #dad8cc; /* Slightly darker Light Grey */
+  background-color: #E8E8E8; /* Lighter Grey for better contrast */
 }
 
-.faqs-section h2,
-.contact-us-section h2 {
+.faqs-section h2 {
   font-size: 2rem;
   font-weight: bold;
   color: #003366; /* Navy Blue */
   margin-bottom: 20px;
+  text-align: center; /* Center-align the title */
 }
 
-.faqs-section .faq-item,
-.contact-us-section {
+.faqs-section .faq-item {
   background-color: #FFFFFF; /* White */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   padding: 20px;
+  margin-bottom: 15px; /* Add spacing between FAQ items */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.faqs-section .faq-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .faqs-section .faq-item h3 {
   cursor: pointer;
+  font-size: 1.25rem; /* Slightly larger font size */
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
   transition: color 0.3s ease;
 }
 
@@ -941,6 +942,19 @@ section p {
   line-height: 1.6;
   margin-top: 10px;
 }
+/* Contact Us Section */
+
+/* FAQs and Contact Us Section */
+.faqs-contact-section {
+  background-color: #F5F5F5; /* Light Grey */
+  padding: 60px 20px;
+  border-radius: 20px; /* Rounded corners for the entire section */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.faqs-contact-section:hover {
+  background-color: #E0E0E0; /* Slightly darker Light Grey */
+}
 
 /* Contact Us Form */
 .contact-us-section form input,
@@ -949,30 +963,35 @@ section p {
   color: #333333; /* Dark Grey */
   border: 1px solid #CCCCCC; /* Light Grey */
   border-radius: 8px;
-  padding: 10px;
+  padding: 12px; /* Increased padding for better usability */
   width: 100%;
   box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
 }
 
 .contact-us-section form input:focus,
 .contact-us-section form textarea:focus {
   outline: none;
   border-color: #005F56; /* Deep Green */
-  box-shadow: 0 0 5px rgba(0, 95, 86, 0.5);
+  box-shadow: 0 0 5px rgba(0, 95, 86, 0.5); /* Green focus ring */
 }
 
 .contact-us-section form button {
   background-color: #005F56; /* Deep Green */
   color: #FFFFFF; /* White */
-  padding: 10px 20px;
+  padding: 12px 24px; /* Increased padding for better usability */
   border: none;
-  border-radius: 8px;
+  border-radius: 10px; /* Rounded button */
+  font-size: 1rem;
+  font-weight: bold;
+  
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
 
 .contact-us-section form button:hover {
   background-color: #008080; /* Teal */
+  transform: translateY(-3px); /* Slight lift on hover */
 }
 /* Latest Events and Blog Section */
 .latest-events-blog-section {
@@ -1561,7 +1580,7 @@ section p {
 .contact-us-section {
   background-color: #F9F9F9; /* Light gray background */
   padding: 3rem 1rem;
-  min-height: 100vh; /* Full screen height */
+  min-height: 70vh; /* Reduced height from 100vh to 70vh */
 }
 
 /* Contact Us Container */
