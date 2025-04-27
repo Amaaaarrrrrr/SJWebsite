@@ -1316,3 +1316,731 @@ section p {
   background-color: #FFC107; /* Lighter gold on hover */
   transform: translateY(-3px); /* Slight lift on hover */
 }
+
+/* Blog Details Section */
+.blog-details-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+  min-height: 100vh; /* Full screen height */
+}
+
+/* Blog Details Container */
+.blog-details-container {
+  background-color: #FFFFFF; /* White background */
+  padding: 2rem;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 800px;
+  margin: 0 auto; /* Center the container */
+}
+
+/* Blog Image */
+.blog-details-image {
+  width: 100%;
+  height: 12rem; /* Fixed height */
+  object-fit: cover; /* Ensures the image covers the area */
+  border-radius: 15px; /* Rounded corners */
+  margin-bottom: 1.5rem;
+}
+
+/* Blog Meta Information */
+.blog-details-meta {
+  font-size: 0.875rem; /* Small text */
+  color: #6B7280; /* Gray color */
+  margin-bottom: 0.5rem;
+}
+
+/* Blog Excerpt */
+.blog-details-excerpt {
+  font-size: 0.875rem; /* Small text */
+  color: #4B5563; /* Darker gray */
+  margin-bottom: 1rem;
+}
+
+/* Blog Title */
+.blog-details-title {
+  font-size: 2.5rem; /* Large font size */
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 1.5rem;
+}
+
+/* Blog Content */
+.blog-details-content {
+  font-size: 1.125rem; /* Slightly larger text */
+  line-height: 1.8; /* Better readability */
+  color: #4B5563; /* Dark gray */
+}
+
+/* Back Link Container */
+.blog-details-back-link-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Back Link Button */
+.blog-details-back-link {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px; /* Rounded button */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.blog-details-back-link:hover {
+  background-color: #008080; /* Teal on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Not Found Container */
+.blog-details-not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Not Found Title */
+.blog-details-not-found-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 1.5rem;
+}
+
+/* Not Found Link */
+.blog-details-not-found-link {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px; /* Rounded button */
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.blog-details-not-found-link:hover {
+  background-color: #008080; /* Teal on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Booking Page Section */
+.booking-page-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 4rem 1.5rem;
+  min-height: 100vh; /* Full screen height */
+}
+
+/* Booking Page Container */
+.booking-page-container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Booking Page Header */
+.booking-page-header {
+  margin-bottom: 3rem;
+}
+
+/* Booking Page Title */
+.booking-page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 1rem;
+}
+
+/* Booking Page Subtitle */
+.booking-page-subtitle {
+  font-size: 1.2rem;
+  color: #4B5563; /* Dark gray */
+  margin-bottom: 2rem;
+}
+
+/* Back to Home Link */
+.booking-page-back-link-container {
+  margin-top: 2.5rem;
+}
+
+.booking-page-back-link {
+  color: #005F56; /* Deep Green */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.booking-page-back-link:hover {
+  color: #008080; /* Teal on hover */
+}
+
+/* Booking Section */
+.booking-section {
+  background-color: #FFFFFF; /* White background */
+  padding: 3rem 2rem;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Booking Title */
+.booking-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Success Message */
+.booking-success-message {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Labels */
+.booking-form-label {
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray */
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Form Inputs */
+.booking-form-input,
+.booking-form-select,
+.booking-form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #D1D5DB; /* Light gray border */
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray text */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-form-input:focus,
+.booking-form-select:focus,
+.booking-form-textarea:focus {
+  border-color: #005F56; /* Deep Green on focus */
+  box-shadow: 0 0 0 3px rgba(0, 95, 86, 0.2); /* Green focus ring */
+}
+
+/* Submit Button */
+.booking-submit-button {
+  background-color: #005F56; /* Gold */
+  color: #FFFFFF; /* White text */
+  padding: 0.75rem 1.5rem;
+  margin-top: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px; /* Rounded button */
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.booking-submit-button:hover {
+  background-color: #008080; /* Lighter gold on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Contact Us Section */
+.contact-us-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+  min-height: 100vh; /* Full screen height */
+}
+
+/* Contact Us Container */
+.contact-us-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #FFFFFF; /* White background */
+  padding: 2rem;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Contact Us Title */
+.contact-us-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Success Message */
+.contact-us-success-message {
+  background-color: #D1FAE5; /* Light green */
+  color: #065F46; /* Dark green */
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Error Message */
+.contact-us-error-message {
+  background-color: #FEE2E2; /* Light red */
+  color: #B91C1C; /* Dark red */
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Labels */
+.contact-us-form-label {
+  font-size: 1rem;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Form Inputs */
+.contact-us-form-input,
+.contact-us-form-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #D1D5DB; /* Light gray border */
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray text */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-us-form-input:focus,
+.contact-us-form-textarea:focus {
+  border-color: #005F56; /* Deep Green on focus */
+  box-shadow: 0 0 0 3px rgba(0, 95, 86, 0.2); /* Green focus ring */
+}
+
+/* Submit Button */
+.contact-us-submit-button {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px; /* Rounded button */
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-us-submit-button:hover {
+  background-color: #008080; /* Teal on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+/* Testimonial Page */
+.testimonial-page {
+  background-color: #F9F9F9; /* Light gray background */
+}
+
+/* Testimonial Page Header */
+.testimonial-page-header {
+  background-color: #008080; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.testimonial-page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.testimonial-page-subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+/* Testimonial Section */
+.testimonial-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+}
+
+.testimonial-section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Testimonial Grid */
+.testimonial-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background-color: #FFFFFF; /* White background */
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.testimonial-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #005F56; /* Deep Green */
+  margin-bottom: 1rem;
+}
+
+.testimonial-role {
+  font-size: 1rem;
+  color: #6B7280; /* Gray */
+  margin-bottom: 1rem;
+}
+
+.testimonial-feedback {
+  font-size: 1rem;
+  color: #374151; /* Dark gray */
+  margin-bottom: 1.5rem;
+}
+
+/* Testimonial Video */
+.testimonial-video iframe {
+  border-radius: 10px;
+}
+
+/* Case Studies Section */
+.case-studies-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+  min-height: 100vh; /* Full screen height */
+}
+
+.case-studies-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Case Studies Title */
+.case-studies-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Case Studies Grid */
+.case-studies-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Case Study Detail Section */
+.case-study-detail {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+  min-height: 100vh; /* Full screen height */
+}
+
+.case-study-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #FFFFFF; /* White background */
+  padding: 2rem;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Case Study Detail Image */
+.case-study-detail-image {
+  width: 100%;
+  height: 16rem; /* Fixed height */
+  object-fit: cover;
+  border-radius: 15px; /* Rounded corners */
+  margin-bottom: 1.5rem;
+}
+
+/* Case Study Detail Title */
+.case-study-detail-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 1.5rem;
+}
+
+/* Case Study Detail Content */
+.case-study-detail-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #4B5563; /* Dark gray */
+  margin-bottom: 2rem;
+}
+
+/* Back Link Button */
+.case-study-detail-back-link {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px; /* Rounded button */
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.case-study-detail-back-link:hover {
+  background-color: #008080; /* Teal on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Not Found Section */
+.case-studies-not-found {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+  min-height: 100vh; /* Full screen height */
+  text-align: center;
+}
+
+.case-studies-not-found-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 1rem;
+}
+
+.case-studies-not-found-link {
+  color: #005F56; /* Deep Green */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.case-studies-not-found-link:hover {
+  color: #008080; /* Teal on hover */
+  text-decoration: underline;
+}
+
+/* FAQ Page Section */
+.faq-page-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+  min-height: 100vh; /* Full screen height */
+}
+
+.faq-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #FFFFFF; /* White background */
+  padding: 2rem;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.faq-page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.faq-page-subtitle {
+  font-size: 1.2rem;
+  color: #4B5563; /* Dark gray */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #FFFFFF; /* White background */
+  padding: 2rem;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.faq-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+  margin-top: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-question {
+  background-color: #003366; /* Navy Blue */
+  color: #FFFFFF; /* White text */
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #005F56; /* Deep Green on hover */
+}
+
+.faq-answer {
+  background-color: #F3F4F6; /* Light gray */
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.faq-answer-text {
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray */
+}
+
+/* Auth Form Section */
+.auth-form-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+  min-height: 100vh; /* Full screen height */
+}
+
+/* Auth Form Container */
+.auth-form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #FFFFFF; /* White background */
+  padding: 2rem;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Auth Form Title */
+.auth-form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Error Message */
+.auth-form-error {
+  background-color: #F87171; /* Red */
+  color: #FFFFFF; /* White text */
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Labels */
+.auth-form-label {
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray */
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Form Inputs */
+.auth-form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #D1D5DB; /* Light gray border */
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray text */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form-input:focus {
+  border-color: #005F56; /* Deep Green on focus */
+  box-shadow: 0 0 0 3px rgba(0, 95, 86, 0.2); /* Green focus ring */
+}
+
+/* Submit Button */
+.auth-form-submit {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px; /* Rounded button */
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.auth-form-submit:hover {
+  background-color: #008080; /* Teal on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Toggle Button */
+.auth-form-toggle {
+  margin-top: 1rem;
+  text-align: center;
+  
+}
+
+.auth-form-toggle-button {
+  color: #005F56; /* Deep Green */
+  font-weight: bold;
+  text-decoration: none;
+  background-color: white;
+  transition: color 0.3s ease;
+}
+
+.auth-form-toggle-button:hover {
+  color: #008080; /* Teal on hover */
+  text-decoration: underline;
+  font-weight: bold;
+  background-color: white; /* Added background color */
+}
+
+/* Auth Page Header */
+.auth-page-header {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.auth-page-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.auth-page-subtitle {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}

@@ -31,32 +31,32 @@ const ContactUs = () => {
   };
 
   return (
-    <section className="bg-lightGray py-12 px-4 md:px-12 min-h-screen">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-navyBlue mb-12">
+    <section className="contact-us-section bg-lightGray py-12 px-4 md:px-12 min-h-screen">
+      <div className="contact-us-container max-w-4xl mx-auto">
+        <h1 className="contact-us-title text-4xl font-bold text-center text-navyBlue mb-12">
           Contact Us
         </h1>
 
         {isSubmitted && !isError && (
-          <div className="bg-green-200 text-green-800 p-4 rounded-lg mb-6">
+          <div className="contact-us-success-message bg-green-200 text-green-800 p-4 rounded-lg mb-6">
             Thank you for contacting us! We will get back to you soon.
           </div>
         )}
 
         {isError && (
-          <div className="bg-red-200 text-red-800 p-4 rounded-lg mb-6">
+          <div className="contact-us-error-message bg-red-200 text-red-800 p-4 rounded-lg mb-6">
             Oops! Something went wrong. Please fill out all fields.
           </div>
         )}
 
         <form
           onSubmit={handleSubmit}
-          className="bg-white p-8 rounded-2xl shadow-md"
+          className="contact-us-form bg-white p-8 rounded-2xl shadow-md"
         >
-          <div className="mb-4">
+          <div className="contact-us-form-group mb-4">
             <label
               htmlFor="name"
-              className="block text-lg font-medium text-navyBlue mb-2"
+              className="contact-us-form-label block text-lg font-medium text-navyBlue mb-2"
             >
               Name
             </label>
@@ -66,15 +66,15 @@ const ContactUs = () => {
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg shadow-sm"
+              className="contact-us-form-input w-full px-4 py-2 border rounded-lg shadow-sm"
               required
             />
           </div>
 
-          <div className="mb-4">
+          <div className="contact-us-form-group mb-4">
             <label
               htmlFor="email"
-              className="block text-lg font-medium text-navyBlue mb-2"
+              className="contact-us-form-label block text-lg font-medium text-navyBlue mb-2"
             >
               Email
             </label>
@@ -84,15 +84,15 @@ const ContactUs = () => {
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg shadow-sm"
+              className="contact-us-form-input w-full px-4 py-2 border rounded-lg shadow-sm"
               required
             />
           </div>
 
-          <div className="mb-6">
+          <div className="contact-us-form-group mb-6">
             <label
               htmlFor="message"
-              className="block text-lg font-medium text-navyBlue mb-2"
+              className="contact-us-form-label block text-lg font-medium text-navyBlue mb-2"
             >
               Message
             </label>
@@ -101,7 +101,7 @@ const ContactUs = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg shadow-sm"
+              className="contact-us-form-textarea w-full px-4 py-2 border rounded-lg shadow-sm"
               rows="6"
               required
             ></textarea>
@@ -109,7 +109,7 @@ const ContactUs = () => {
 
           <button
             type="submit"
-            className="w-full bg-deepGreen text-white py-3 rounded-lg hover:bg-teal transition"
+            className="contact-us-submit-button w-full bg-deepGreen text-white py-3 rounded-lg hover:bg-teal transition"
           >
             Send Message
           </button>

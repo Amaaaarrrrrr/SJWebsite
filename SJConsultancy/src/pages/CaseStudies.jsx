@@ -50,9 +50,9 @@ const CaseStudies = () => {
 
     if (!caseStudy) {
       return (
-        <section className="bg-lightGray py-12 px-4 md:px-12 min-h-screen text-center">
-          <h2 className="text-2xl font-bold text-navyBlue">Case Study Not Found</h2>
-          <Link to="/case-studies" className="text-deepGreen hover:underline mt-4 block">
+        <section className="case-studies-not-found bg-lightGray py-12 px-4 md:px-12 min-h-screen text-center">
+          <h2 className="case-studies-not-found-title text-2xl font-bold text-navyBlue">Case Study Not Found</h2>
+          <Link to="/case-studies" className="case-studies-not-found-link text-deepGreen hover:underline mt-4 block">
             ← Back to Case Studies
           </Link>
         </section>
@@ -60,18 +60,18 @@ const CaseStudies = () => {
     }
 
     return (
-      <section className="bg-lightGray py-12 px-4 md:px-12 min-h-screen">
-        <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+      <section className="case-study-detail bg-lightGray py-12 px-4 md:px-12 min-h-screen">
+        <div className="case-study-detail-container max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md">
           <img
             src={caseStudy.image}
             alt={caseStudy.title}
-            className="w-full h-64 object-cover rounded-xl mb-6"
+            className="case-study-detail-image w-full h-64 object-cover rounded-xl mb-6"
           />
-          <h1 className="text-4xl font-bold text-navyBlue mb-6">{caseStudy.title}</h1>
-          <p className="text-gray-600 text-lg mb-8">{caseStudy.content}</p>
+          <h1 className="case-study-detail-title text-4xl font-bold text-navyBlue mb-6">{caseStudy.title}</h1>
+          <p className="case-study-detail-content text-gray-600 text-lg mb-8">{caseStudy.content}</p>
           <Link
             to="/case-studies"
-            className="bg-deepGreen text-white px-6 py-3 rounded-full hover:bg-teal transition"
+            className="case-study-detail-back-link bg-deepGreen text-white px-6 py-3 rounded-full hover:bg-teal transition"
           >
             ← Back to Case Studies
           </Link>
@@ -81,12 +81,12 @@ const CaseStudies = () => {
   }
 
   return (
-    <section className="bg-lightGray py-12 px-4 md:px-12 min-h-screen">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-navyBlue mb-12">
+    <section className="case-studies-section bg-lightGray py-12 px-4 md:px-12 min-h-screen">
+      <div className="case-studies-container max-w-6xl mx-auto">
+        <h1 className="case-studies-title text-4xl font-bold text-center text-navyBlue mb-12">
           Case Studies
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="case-studies-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {caseStudiesData.map((caseStudy) => (
             <CaseStudy key={caseStudy.id} caseStudy={caseStudy} />
           ))}

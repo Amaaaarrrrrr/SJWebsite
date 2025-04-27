@@ -43,47 +43,42 @@ const faqsData = [
     },
   ];
   
-const FAQs = () => {
-  const [activeIndex, setActiveIndex] = useState(null);  // Store the active question
-    
-
-  // Handle toggle of FAQ answer
-  const toggleAnswer = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);  // Toggle the active index
-    
-  };
-
-  return (
-    <section className="bg-lightGray py-12 px-4 md:px-12 min-h-screen">
-      <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-md">
-        <h1 className="text-4xl font-bold text-center text-navyBlue mb-8">
-          Frequently Asked Questions
-        </h1>
-        
-    
-
-        {/* Accordion FAQ */}
-        <div>
-          {faqsData.map((faq, index) => (
-            <div key={index} className="mb-4">
-              <button
-                onClick={() => toggleAnswer(index)}
-                className="w-full text-left p-4 bg-navyBlue text-white font-bold rounded-lg shadow-md hover:bg-deepGreen transition"
-              >
-                {faq.question}
-              </button>
-
-              {activeIndex === index && (
-                <div className="p-4 mt-2 bg-lightGray rounded-md">
-                  <p className="text-gray-700">{faq.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
+  const FAQs = () => {
+    const [activeIndex, setActiveIndex] = useState(null);
+  
+    const toggleAnswer = (index) => {
+      setActiveIndex(activeIndex === index ? null : index);
+    };
+  
+    return (
+      <section className="faq-section bg-lightGray py-12 px-4 md:px-12 min-h-screen">
+        <div className="faq-container max-w-3xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+          <h1 className="faq-title text-4xl font-bold text-center text-navyBlue mb-8">
+            Frequently Asked Questions
+          </h1>
+  
+          {/* Accordion FAQ */}
+          <div className="faq-accordion">
+            {faqsData.map((faq, index) => (
+              <div key={index} className="faq-item mb-4">
+                <button
+                  onClick={() => toggleAnswer(index)}
+                  className="faq-question w-full text-left p-4 bg-navyBlue text-white font-bold rounded-lg shadow-md hover:bg-deepGreen transition"
+                >
+                  {faq.question}
+                </button>
+  
+                {activeIndex === index && (
+                  <div className="faq-answer p-4 mt-2 bg-lightGray rounded-md">
+                    <p className="faq-answer-text text-gray-700">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  );
-};
-
-export default FAQs;
+      </section>
+    );
+  };
+  
+  export default FAQs;

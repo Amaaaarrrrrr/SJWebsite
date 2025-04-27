@@ -8,7 +8,6 @@ import Homepage from './components/Home';
 import Blogs from './components/Blogs';
 import BlogDetails from './pages/BlogDetails';
 import Register from './components/Register';
-import Login from './components/Login';
 import UserProfile from './components/User';
 import BookingPage from './pages/BookingPage';
 import CaseStudies from "./pages/CaseStudies";
@@ -29,7 +28,6 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/bookings" element={<BookingPage />} />
         <Route path="/case-studies" element={<CaseStudies />} />

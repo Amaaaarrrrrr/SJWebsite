@@ -59,11 +59,11 @@ const BlogDetails = () => {
   // If blog is not found, display a not-found message
   if (!blog) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center">
-        <h2 className="text-3xl text-navyBlue font-bold">Blog Not Found</h2>
+      <div className="blog-details-not-found-container min-h-screen flex flex-col items-center justify-center">
+        <h2 className="blog-details-not-found-title text-3xl text-navyBlue font-bold">Blog Not Found</h2>
         <Link
           to="/blogs"
-          className="mt-6 bg-deepGreen text-white px-6 py-3 rounded-full hover:bg-teal transition"
+          className="blog-details-not-found-link mt-6 bg-deepGreen text-white px-6 py-3 rounded-full hover:bg-teal transition"
         >
           Go Back to Blogs
         </Link>
@@ -73,22 +73,22 @@ const BlogDetails = () => {
 
   // If blog is found, render the blog details
   return (
-    <section className="bg-lightGray py-12 px-4 md:px-12 min-h-screen">
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md">
+    <section className="blog-details-section bg-lightGray py-12 px-4 md:px-12 min-h-screen">
+      <div className="blog-details-container max-w-4xl mx-auto bg-white p-8 rounded-2xl shadow-md">
         <img
           src={blog.image}
           alt={blog.title}
-          className="w-full h-48 object-cover rounded-xl mb-6"
+          className="blog-details-image w-full h-48 object-cover rounded-xl mb-6"
         />
-        <p className="text-sm text-gray-500 mb-2">{blog.date} | {blog.author}</p>
-        <p className="text-gray-700 text-sm">{blog.excerpt}</p>
-        <h1 className="text-4xl font-bold text-navyBlue mb-6">{blog.title}</h1>
-        <p className="text-gray-700 text-lg">{blog.content}</p>
+        <p className="blog-details-meta text-sm text-gray-500 mb-2">{blog.date} | {blog.author}</p>
+        <p className="blog-details-excerpt text-gray-700 text-sm">{blog.excerpt}</p>
+        <h1 className="blog-details-title text-4xl font-bold text-navyBlue mb-6">{blog.title}</h1>
+        <p className="blog-details-content text-gray-700 text-lg">{blog.content}</p>
   
-        <div className="mt-8">
+        <div className="blog-details-back-link-container mt-8">
           <Link
             to="/blogs"
-            className="bg-deepGreen text-white px-6 py-3 rounded-full hover:bg-teal transition"
+            className="blog-details-back-link bg-deepGreen text-white px-6 py-3 rounded-full hover:bg-teal transition"
           >
             ← Back to Blogs
           </Link>
@@ -96,8 +96,6 @@ const BlogDetails = () => {
       </div>
     </section>
   );
-  
-  
 };
 
 export default BlogDetails;

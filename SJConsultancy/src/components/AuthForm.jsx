@@ -11,9 +11,8 @@ const AuthForm = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const navigate = useNavigate(); // Updated hook
+  const navigate = useNavigate();
 
-  // Email validation function
   const validateEmail = (email) => {
     if (!email.includes('@')) {
       return 'Email must contain an "@" symbol.';
@@ -21,7 +20,6 @@ const AuthForm = () => {
     return '';
   };
 
-  // Password validation function
   const validatePassword = (password) => {
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if (!password) {
@@ -50,10 +48,9 @@ const AuthForm = () => {
 
     const { email, password, name } = formData;
 
-    // Validate fields before submitting
     const emailError = validateEmail(email);
     const passwordError = validatePassword(password);
-    
+
     if (emailError || passwordError) {
       setErrorMessage(emailError || passwordError);
       setLoading(false);
@@ -61,18 +58,15 @@ const AuthForm = () => {
     }
 
     if (isLogin) {
-      // Dummy login validation for demonstration
       if (email === 'user@example.com' && password === 'password123') {
-        navigate('/dashboard'); // Updated navigation method
+        navigate('/dashboard');
       } else {
         setErrorMessage('Invalid credentials. Please try again.');
         setLoading(false);
       }
     } else {
-      // Dummy registration validation for demonstration
       if (name && email && password) {
-        // Simulate successful registration
-        navigate('/login'); // Redirect to login after successful registration
+        navigate('/login');
       } else {
         setErrorMessage('Please fill in all fields.');
         setLoading(false);
@@ -81,15 +75,15 @@ const AuthForm = () => {
   };
 
   return (
-    <section className="bg-lightGray py-12 px-4 md:px-12 min-h-screen">
-      <div className="max-w-md mx-auto bg-white p-8 rounded-2xl shadow-md">
-        <h1 className="text-3xl font-bold text-navyBlue mb-6 text-center">
+    <section className="auth-form-section bg-lightGray py-12 px-4 md:px-12 min-h-screen">
+      <div className="auth-form-container max-w-md mx-auto bg-white p-8 rounded-2xl shadow-md">
+        <h1 className="auth-form-title text-3xl font-bold text-navyBlue mb-6 text-center">
           {isLogin ? 'Login' : 'Register'}
         </h1>
 
         {/* Error Message */}
         {errorMessage && (
-          <div className="bg-red-500 text-white py-3 px-6 rounded-lg mb-6 text-center">
+          <div className="auth-form-error bg-red-500 text-white py-3 px-6 rounded-lg mb-6 text-center">
             {errorMessage}
           </div>
         )}
@@ -97,46 +91,46 @@ const AuthForm = () => {
         {/* Login or Register Form */}
         <form onSubmit={handleSubmit}>
           {!isLogin && (
-            <div className="mb-4">
-              <label className="block text-gray-700 mb-2">Full Name</label>
+            <div className="auth-form-group mb-4">
+              <label className="auth-form-label block text-gray-700 mb-2">Full Name</label>
               <input
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required={!isLogin}
-                className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+                className="auth-form-input w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
               />
             </div>
           )}
 
-          <div className="mb-4">
-            <label className="block text-gray-700 mb-2">Email Address</label>
+          <div className="auth-form-group mb-4">
+            <label className="auth-form-label block text-gray-700 mb-2">Email Address</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+              className="auth-form-input w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>
 
-          <div className="mb-4">
-            <label className="block text-gray-700 mb-2">Password</label>
+          <div className="auth-form-group mb-4">
+            <label className="auth-form-label block text-gray-700 mb-2">Password</label>
             <input
               type="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
               required
-              className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+              className="auth-form-input w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
             />
           </div>
 
           <button
             type="submit"
-            className="bg-deepGreen text-white py-3 px-6 rounded-full hover:bg-teal transition w-full"
+            className="auth-form-submit bg-deepGreen text-white py-3 px-6 rounded-full hover:bg-teal transition w-full"
             disabled={loading}
           >
             {loading ? 'Submitting...' : isLogin ? 'Login' : 'Register'}
@@ -144,14 +138,14 @@ const AuthForm = () => {
         </form>
 
         {/* Toggle between Login and Register */}
-        <div className="mt-4 text-center">
+        <div className="auth-form-toggle mt-4 text-center">
           <button
             onClick={() => {
               setIsLogin((prevState) => !prevState);
-              setErrorMessage(''); // Clear error message when toggling
+              setErrorMessage('');
               setFormData({ email: '', password: '', name: '' });
             }}
-            className="text-deepGreen hover:underline"
+            className="auth-form-toggle-button text-deepGreen hover:underline"
           >
             {isLogin ? "Don't have an account? Register here" : 'Already have an account? Login here'}
           </button>
