@@ -240,3 +240,90 @@ footer a:hover {
   border-radius: 8px;
   margin-bottom: 20px; /* Spacing below image */
 }
+
+
+
+/* Overall navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2a3d55; /* Deep Blue background */
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li {
+  font-size: 1rem;
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #00c1a4; /* Highlight color */
+  text-decoration: underline;
+}
+
+.navbar .nav-links a:active {
+  color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none; /* Initially hide menu items */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #2a3d55;
+    width: 100%;
+    padding: 20px;
+    border-top: 2px solid #00c1a4;
+  }
+
+  .navbar .nav-links.active {
+    display: flex; /* Show the menu when active */
+  }
+
+  .navbar .nav-links li {
+    padding: 10px 0;
+  }
+
+  .navbar .logo {
+    margin-right: auto;
+  }
+}
+
+.menu-toggle {
+  display: none; /* Hide menu toggle by default */
+}
+
+/* Show menu toggle in smaller screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+}

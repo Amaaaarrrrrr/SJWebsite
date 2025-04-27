@@ -1,22 +1,31 @@
-// Navbar.jsx
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Use Link for client-side routing (instead of <a> tags)
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav>
+    <nav className="navbar">
       <div className="logo">S.J Consultancy</div>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutus">About Us</a></li>
-        <li><a href="/blogs">Blogs and Insights</a></li>
-        <li><a href="/bookings">Bookings</a></li>
-        <li><a href="/programs">Programs</a></li>
-        <li><a href="/contactus">Contact Us</a></li>
-        <li><a href="/testimonials">Testimonials</a></li>
-        <li><a href="/case-studies">Case Studies</a></li>
-        <li><a href="/faqs">FAQs</a></li>
-        <li><a href="/auth">Signup/Login</a></li>
-        <li><a href="/profile">👤 Profile</a></li>
+      <button className="menu-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
+      <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/aboutus">About Us</Link></li>
+        <li><Link to="/blogs">Blogs and Insights</Link></li>
+        <li><Link to="/bookings">Bookings</Link></li>
+        <li><Link to="/programs">Programs</Link></li>
+        <li><Link to="/contactus">Contact Us</Link></li>
+        <li><Link to="/testimonials">Testimonials</Link></li>
+        <li><Link to="/case-studies">Case Studies</Link></li>
+        <li><Link to="/faqs">FAQs</Link></li>
+        <li><Link to="/auth">Signup/Login</Link></li>
+        <li><Link to="/profile">👤 Profile</Link></li>
       </ul>
     </nav>
   );

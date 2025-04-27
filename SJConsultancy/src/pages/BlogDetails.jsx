@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 
-// Blog posts data (in real apps you fetch this from an API)
 const blogPosts = [
   {
     id: 1,

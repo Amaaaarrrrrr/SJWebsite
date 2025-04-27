@@ -5,25 +5,25 @@ const programsData = [
     id: 1,
     title: "Business Consultancy",
     description: "We offer tailored business consultancy services designed to optimize your operations, increase profitability, and streamline processes. Our expert consultants work with you to identify pain points and deliver actionable solutions. ",
-    image: "/business-consultancy.jpg",
+    image: "/program1.jpeg",
   },
   {
     id: 2,
     title: "Training and Workshops",
     description: "Our training programs provide practical skills in areas like digital marketing, project management, and data analytics. Through hands-on workshops, we equip your team with the knowledge to grow and thrive in today's competitive market.",
-    image: "/training-workshops.jpg",
+    image: "/program2.jpeg",
   },
   {
     id: 3,
     title: "Monitoring & Evaluation Support",
     description: "We help organizations optimize their monitoring and evaluation processes, ensuring effective program tracking and reporting. Our services improve project outcomes through better data management and analysis.",
-    image: "/monitoring-evaluation.jpg",
+    image: "/program3.jpeg",
   },
   {
     id: 4,
     title: "Data Analytics Setup",
     description: "With our data analytics services, we help organizations set up efficient systems to collect, analyze, and interpret data. These insights can drive informed decisions, improve performance, and give your business a competitive edge.",
-    image: "/data-analytics.jpg",
+    image: "/program4.jpeg",
   },
 ];
 

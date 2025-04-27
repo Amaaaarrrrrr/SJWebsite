@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Updated hook
+import { useNavigate } from 'react-router-dom';
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true); // State to toggle between login and register
@@ -13,6 +13,29 @@ const AuthForm = () => {
 
   const navigate = useNavigate(); // Updated hook
 
+  // Email validation function
+  const validateEmail = (email) => {
+    if (!email.includes('@')) {
+      return 'Email must contain an "@" symbol.';
+    }
+    return '';
+  };
+
+  // Password validation function
+  const validatePassword = (password) => {
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    if (!password) {
+      return 'Password is required.';
+    }
+    if (password.length < 8) {
+      return 'Password must be at least 8 characters long.';
+    }
+    if (!passwordRegex.test(password)) {
+      return 'Password must contain at least one uppercase letter, one number, and one special character.';
+    }
+    return '';
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -25,9 +48,20 @@ const AuthForm = () => {
     e.preventDefault();
     setLoading(true);
 
+    const { email, password, name } = formData;
+
+    // Validate fields before submitting
+    const emailError = validateEmail(email);
+    const passwordError = validatePassword(password);
+    
+    if (emailError || passwordError) {
+      setErrorMessage(emailError || passwordError);
+      setLoading(false);
+      return;
+    }
+
     if (isLogin) {
       // Dummy login validation for demonstration
-      const { email, password } = formData;
       if (email === 'user@example.com' && password === 'password123') {
         navigate('/dashboard'); // Updated navigation method
       } else {
@@ -36,7 +70,6 @@ const AuthForm = () => {
       }
     } else {
       // Dummy registration validation for demonstration
-      const { email, password, name } = formData;
       if (name && email && password) {
         // Simulate successful registration
         navigate('/login'); // Redirect to login after successful registration
@@ -120,7 +153,7 @@ const AuthForm = () => {
             }}
             className="text-deepGreen hover:underline"
           >
-            {isLogin ? 'Don\'t have an account? Register here' : 'Already have an account? Login here'}
+            {isLogin ? "Don't have an account? Register here" : 'Already have an account? Login here'}
           </button>
         </div>
       </div>
