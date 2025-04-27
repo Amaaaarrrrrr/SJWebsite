@@ -827,11 +827,14 @@ section p {
 .case-studies-section {
   background-color: #F5F5F5; /* Light Grey */
   padding: 60px 20px;
+  margin: 0;
+ 
 }
 
 .case-study {
   background-color: #FFFFFF; /* White */
   border-radius: 10px;
+  height: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -883,6 +886,7 @@ section p {
   overflow-y: auto; /* Enable vertical scrolling */
   border-radius: 20px; /* Slightly smaller radius for a modern look */
   padding: 15px; /* Increased padding for better spacing */
+  margin: 0;
 }
 
 .faqs-section::-webkit-scrollbar {
@@ -948,6 +952,8 @@ section p {
 .faqs-contact-section {
   background-color: #F5F5F5; /* Light Grey */
   padding: 60px 20px;
+  margin-top: 0;
+  margin: 0 auto;
   border-radius: 20px; /* Rounded corners for the entire section */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
