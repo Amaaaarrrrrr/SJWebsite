@@ -1,5 +1,18 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Use Link for client-side routing (instead of <a> tags)
+import { Link } from 'react-router-dom'; 
+import { 
+  Home, 
+  BookOpen, 
+  User, 
+  LogIn, 
+  MessageSquare, 
+  HelpCircle, 
+  FileText, 
+  Calendar, 
+  GraduationCap, 
+  Phone, 
+  Folder 
+} from 'lucide-react';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,23 +24,90 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-      <img src="/logo.png" alt="Logo" className="logo-image" />
+        <img src="/logo.png" alt="Logo" className="logo-image" />
       </div>
       <button className="menu-toggle" onClick={toggleMenu}>
         ☰
       </button>
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/aboutus">About Us</Link></li>
-        <li><Link to="/blogs">Blogs and Insights</Link></li>
-        <li><Link to="/bookings">Bookings</Link></li>
-        <li><Link to="/programs">Programs</Link></li>
-        <li><Link to="/contactus">Contact Us</Link></li>
-        <li><Link to="/testimonials">Testimonials</Link></li>
-        <li><Link to="/case-studies">Case Studies</Link></li>
-        <li><Link to="/faqs">FAQs</Link></li>
-        <li><Link to="/auth">Signup/Login</Link></li>
-        <li><Link to="/profile">👤 Profile</Link></li>
+
+        <li>
+          <Link to="/">
+            <Home />
+            Home
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/aboutus">
+            <BookOpen />
+            About Us
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/blogs">
+            <FileText />
+            Blogs and Insights
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/bookings">
+            <Calendar />
+            Bookings
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/programs">
+            <GraduationCap />
+            Programs
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/contactus">
+            <Phone />
+            Contact Us
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/testimonials">
+            <MessageSquare />
+            Testimonials
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/case-studies">
+            <Folder />
+            Case Studies
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/faqs">
+            <HelpCircle />
+            FAQs
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/auth">
+            <LogIn />
+            Signup/Login
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/profile">
+            <User />
+            Profile
+          </Link>
+        </li>
+
       </ul>
     </nav>
   );
