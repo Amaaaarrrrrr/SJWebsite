@@ -100,7 +100,7 @@ const AboutUs = () => {
           <p className="text-lg mb-6">
             Whether you're just starting or scaling your business, we are here to help you succeed. Book a consultation with us today and start your journey towards growth and success.
           </p>
-          <a href="/booking" className="bg-gold text-white py-3 px-6 rounded-full hover:bg-yellow-400 transition">
+          <a href="/bookings" className="bg-gold text-white py-3 px-6 rounded-full hover:bg-yellow-400 transition">
             Book Us Now
           </a>
         </div>
