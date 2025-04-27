@@ -11,6 +11,14 @@ import Register from './components/Register';
 import Login from './components/Login';
 import UserProfile from './components/User';
 import BookingPage from './pages/BookingPage';
+import CaseStudies from "./pages/CaseStudies";
+import ContactUs from "./pages/ContactUs";
+import FAQPage from './pages/FAQPage';
+import PaymentPage from './pages/PaymentPage';
+import ProgramsPage from './pages/ProgramsPage';
+import TestimonialPage from './pages/TestimonialPage';
+import AuthPage from './pages/AuthPage';
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
@@ -23,7 +31,16 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<UserProfile />} />
-        <Route path="/booking" element={<BookingPage />} />
+        <Route path="/bookings" element={<BookingPage />} />
+        <Route path="/case-studies" element={<CaseStudies />} />
+        <Route path="/case-studies/:id" element={<CaseStudies />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/faqs" element={<FAQPage />} />
+        <Route path="/payments" element={<PaymentPage />} />
+        <Route path="/programs" element={<ProgramsPage />} />
+        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/testimonials" element={<TestimonialPage />} />
+        <Route path="/aboutus" element={<AboutUs />} />
       </Routes>
       <Footer />
     </Router>

@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 function Booking() {
   const [formData, setFormData] = useState({
@@ -12,10 +11,11 @@ function Booking() {
   });
 
   const [successMessage, setSuccessMessage] = useState('');
+  const navigate = useNavigate(); // Initialize the navigate function
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevData => ({
+    setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -23,21 +23,26 @@ function Booking() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would normally send data to a server
+    // Normally send data to the server for processing
 
-    setSuccessMessage('Thank you! Your booking has been received.');
+    setSuccessMessage('Thank you! Your booking has been received. You will be redirected to the payments page shortly');
     setFormData({ name: '', email: '', service: '', date: '' });
 
     // Clear the success message after 5 seconds
     setTimeout(() => {
       setSuccessMessage('');
     }, 5000);
+
+    // After booking, navigate to the payment page
+    setTimeout(() => {
+      navigate('/payments'); // Redirect to the payment page after booking
+    }, 2000); // Slight delay to let the success message appear
   };
 
   return (
     <section className="bg-lightGray py-12 px-4 md:px-12 min-h-screen">
       <div className="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-md">
-        <h1 className="text-3xl font-bold text-navyBlue mb-6 text-center">Book a Consultation</h1>
+        <h1 className="text-3xl font-bold text-navyBlue mb-6 text-center">Book a Consultation / Program</h1>
 
         {/* Success Message */}
         {successMessage && (
@@ -71,35 +76,34 @@ function Booking() {
             />
           </div>
 
-            <div className="mb-4">
-                <label className="block text-gray-700 mb-2">Select Service</label>
-                <select
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-deepGreen"
-                required
-                >
-                <option value="">-- Choose a Service --</option>
-                <option value="Business Consultancy">Business Consultancy</option>
-                <option value="Training and Workshops">Training and Workshops</option>
-                <option value="Monitoring & Evaluation Support">Monitoring & Evaluation Support</option>
-                <option value="Data Analytics Setup">Data Analytics Setup</option>
-                </select>
-            </div>
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">Select Service</label>
+            <select
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-deepGreen"
+              required
+            >
+              <option value="">-- Choose a Service --</option>
+              <option value="Business Consultancy">Business Consultancy</option>
+              <option value="Training and Workshops">Training and Workshops</option>
+              <option value="Monitoring & Evaluation Support">Monitoring & Evaluation Support</option>
+              <option value="Data Analytics Setup">Data Analytics Setup</option>
+            </select>
+          </div>
 
-        <div className="mb-4">
-        <label className="block text-gray-700 mb-2">Your Message</label>
-        <textarea
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          rows="4"
-          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-deepGreen"
-          placeholder="Tell us more about your needs..."
-        ></textarea>
-      </div>
-
+          <div className="mb-4">
+            <label className="block text-gray-700 mb-2">Your Message</label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="4"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-deepGreen"
+              placeholder="Tell us more about your needs..."
+            ></textarea>
+          </div>
 
           <div className="mb-6">
             <label className="block text-gray-700 mb-2">Preferred Date</label>

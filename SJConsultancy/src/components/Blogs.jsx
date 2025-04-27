@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const blogPosts = [
@@ -55,7 +55,7 @@ const blogPosts = [
   
 
 const Blogs = () => {
-  const navigate = useNavigate(); // For View All Blogs button navigation
+ 
 
   return (
     <section className="bg-lightGray py-12 px-4 md:px-12">

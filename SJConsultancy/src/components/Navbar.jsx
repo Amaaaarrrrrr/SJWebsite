@@ -10,12 +10,12 @@ const Navbar = () => {
         <li><a href="/aboutus">About Us</a></li>
         <li><a href="/blogs">Blogs and Insights</a></li>
         <li><a href="/bookings">Bookings</a></li>
-        <li><a href="/payments">Payments</a></li>
+        <li><a href="/programs">Programs</a></li>
         <li><a href="/contactus">Contact Us</a></li>
         <li><a href="/testimonials">Testimonials</a></li>
-        <li><a href="/casestudies">Case Studies</a></li>
+        <li><a href="/case-studies">Case Studies</a></li>
         <li><a href="/faqs">FAQs</a></li>
-        <li><a href="/login">Signup/Login</a></li>
+        <li><a href="/auth">Signup/Login</a></li>
         <li><a href="/profile">👤 Profile</a></li>
       </ul>
     </nav>

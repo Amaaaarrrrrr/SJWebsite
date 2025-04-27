@@ -8,7 +8,7 @@ const BookingPage = () => {
     <section className="bg-lightGray py-16 px-6 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-navyBlue">Schedule Your Consultation</h1>
+          <h1 className="text-4xl font-bold text-navyBlue">Schedule Your Consultation or Program</h1>
           <p className="mt-4 text-gray-600 text-lg">
             Ready to grow your business, strengthen your team, or get data-driven results? Fill out the form below and let's connect!
           </p>
