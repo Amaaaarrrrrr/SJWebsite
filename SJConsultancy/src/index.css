@@ -2044,3 +2044,141 @@ section p {
   font-size: 1.2rem;
   margin-top: 1rem;
 }
+
+/* User Profile Section */
+.user-profile-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 3rem 1rem;
+  min-height: 100vh; /* Full screen height */
+}
+
+/* User Profile Container */
+.user-profile-container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #FFFFFF; /* White background */
+  padding: 2rem;
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* User Profile Title */
+.user-profile-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* User Profile Info */
+.user-profile-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.user-profile-picture {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%; /* Circular image */
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+.user-profile-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #005F56; /* Deep Green */
+  margin-bottom: 0.5rem;
+}
+
+.user-profile-email {
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray */
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.user-profile-edit-button,
+.user-profile-settings-button,
+.user-profile-logout-button,
+.user-profile-save-button {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px; /* Rounded button */
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.user-profile-edit-button {
+  background-color: #008080; /* Teal */
+  color: #FFFFFF; /* White text */
+  margin-bottom: 1rem;
+}
+
+.user-profile-edit-button:hover {
+  background-color: #005F56; /* Deep Green on hover */
+}
+
+.user-profile-settings-button {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  margin-bottom: 1rem;
+}
+
+.user-profile-settings-button:hover {
+  background-color: #008080; /* Teal on hover */
+}
+
+.user-profile-logout-button {
+  background-color: #EF4444; /* Red */
+  color: #FFFFFF; /* White text */
+  margin-bottom: 1rem;
+}
+
+.user-profile-logout-button:hover {
+  background-color: #DC2626; /* Darker red on hover */
+}
+
+.user-profile-save-button {
+  background-color: #005F56; /* Deep Green */
+  color: #FFFFFF; /* White text */
+}
+
+.user-profile-save-button:hover {
+  background-color: #008080; /* Teal on hover */
+}
+
+/* Edit Form */
+.user-profile-edit-form {
+  margin-top: 2rem;
+}
+
+.user-profile-form-group {
+  margin-bottom: 1rem;
+}
+
+.user-profile-form-label {
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray */
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.user-profile-form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #D1D5DB; /* Light gray border */
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #4B5563; /* Dark gray text */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-profile-form-input:focus {
+  border-color: #005F56; /* Deep Green on focus */
+  box-shadow: 0 0 0 3px rgba(0, 95, 86, 0.2); /* Green focus ring */
+}
