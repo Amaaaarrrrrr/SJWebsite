@@ -2067,21 +2067,28 @@ section p {
 
 /* Auth Form Section */
 .auth-form-section {
-  background-color: #F9F9F9; /* Light gray background */
-  padding: 3rem 1rem;
+  background-image: url('/logo.png'); /* Replace with your image path */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Fixes the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
   min-height: 100vh; /* Full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers the form vertically and horizontally */
 }
 
 /* Auth Form Container */
 .auth-form-container {
   max-width: 400px;
   margin: 0 auto;
-  background-color: #FFFFFF; /* White background */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
   padding: 2rem;
   border-radius: 20px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-
 /* Auth Form Title */
 .auth-form-title {
   font-size: 2rem;
