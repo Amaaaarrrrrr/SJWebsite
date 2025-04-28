@@ -25,6 +25,7 @@ import Portfolio from './components/Portfolio';
 function App() {
   return (
     <Router>
+      <AuthBar />
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
