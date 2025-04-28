@@ -445,7 +445,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   background-color: #005F56; /* Deep Green */
-  padding: 10px 20px;
+  padding: 15px 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
@@ -490,6 +490,7 @@ html, body {
   font-size: 16px;
   font-weight: 500;
   color: #FFFFFF; /* White */
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 
@@ -521,6 +522,54 @@ html, body {
   font-size: 18px;
 }
 
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+  
+}
+.navbar .dropdown-toggle {
+  background: none;
+  border: none;
+  margin: 0;
+  color: #FFFFFF; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover {
+  color: #FFD700; /* Gold on hover */
+}
+
+
+.navbar .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #008080;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+}
+
+.navbar .dropdown-menu li {
+  padding: 10px 20px;
+}
+
+.navbar .dropdown-menu li:hover {
+  background-color: #003366;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .menu-toggle {
@@ -550,6 +599,33 @@ html, body {
   .nav-links a {
     font-size: 18px;
   }
+}
+/* Top Bar Styling */
+.top-bar {
+  background-color: #89c5bf; /* Light Gray */
+  text-align: right;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-bottom: 2px solid #005F56;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-bar a {
+  color: #003366; /* Navy Blue */
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.top-bar a:hover {
+  color: #005F56; /* Deep Green on hover */
+  text-decoration: underline;
 }
 
 /* ======================== */
@@ -760,18 +836,6 @@ section p {
   line-height: 1.8;
 }
 
-.service-image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 100%; /* Rounded/Circular images */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.rounded-image {
-  border-radius: 50%; /* Circular images */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 /* Why Choose Us Section */
 .grid {

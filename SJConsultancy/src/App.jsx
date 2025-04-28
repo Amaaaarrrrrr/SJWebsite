@@ -18,10 +18,12 @@ import ProgramsPage from './pages/ProgramsPage';
 import TestimonialPage from './pages/TestimonialPage';
 import AuthPage from './pages/AuthPage';
 import AboutUs from './components/AboutUs';
+import AuthBar from './components/AuthBar';
 
 function App() {
   return (
     <Router>
+      <AuthBar />
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />

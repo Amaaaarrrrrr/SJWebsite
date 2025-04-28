@@ -15,6 +15,7 @@ const Home = () => {
   };
   return (
     <div>
+      
       {/* Logo Section */}
      {/* Logo Section */}
      <header className="logo-section text-center text-white">
@@ -64,78 +65,50 @@ const Home = () => {
 
 
      {/* Services Section */}
-     <section className="services-section py-12 px-4 md:px-12">
-        <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Our Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Service 1 */}
-          <div className="service-container flex flex-col md:flex-row items-center gap-6">
-            <div className="service-image">
-              <img
-                src="/program1.jpeg"
-                alt="Business Consultancy"
-                className="rounded-image"
-              />
-            </div>
-            <div className="service-text">
-              <h3 className="text-2xl font-semibold text-navyBlue mb-4">Business Consultancy</h3>
-              <p className="text-lg text-gray-700">
-                Our Business Consultancy service helps organizations streamline their operations, improve efficiency, and develop strategies for sustainable growth. We work closely with businesses to identify challenges, analyze market trends, and create tailored solutions that drive success.
-              </p>
-            </div>
-          </div>
+<section className="services-section py-12 px-4 md:px-12">
+  <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Our Services</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+    {/* Service 1 */}
+    <div className="service-container flex flex-col items-start gap-6">
+      <div className="service-text">
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">Business Consultancy</h3>
+        <p className="text-lg text-gray-700">
+          Our Business Consultancy service helps organizations streamline their operations, improve efficiency, and develop strategies for sustainable growth. We work closely with businesses to identify challenges, analyze market trends, and create tailored solutions that drive success.
+        </p>
+      </div>
+    </div>
 
-          {/* Service 2 */}
-          <div className="service-container flex flex-col md:flex-row-reverse items-center gap-6">
-            <div className="service-image">
-              <img
-                src="/program2.jpeg"
-                alt="Training and Workshops"
-                className="rounded-image"
-              />
-            </div>
-            <div className="service-text">
-              <h3 className="text-2xl font-semibold text-navyBlue mb-4">Training and Workshops</h3>
-              <p className="text-lg text-gray-700">
-                We offer specialized training and workshops that focus on empowering your team with the skills and knowledge they need to thrive in today's dynamic business environment. Our hands-on, practical approach ensures that your employees are equipped with real-world solutions.
-              </p>
-            </div>
-          </div>
+    {/* Service 2 */}
+    <div className="service-container flex flex-col items-start gap-6">
+      <div className="service-text">
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">Training and Workshops</h3>
+        <p className="text-lg text-gray-700">
+          We offer specialized training and workshops that focus on empowering your team with the skills and knowledge they need to thrive in today's dynamic business environment. Our hands-on, practical approach ensures that your employees are equipped with real-world solutions.
+        </p>
+      </div>
+    </div>
 
-          {/* Service 3 */}
-          <div className="service-container flex flex-col md:flex-row items-center gap-6">
-            <div className="service-image">
-              <img
-                src="/program3.jpeg"
-                alt="Monitoring and Evaluation"
-                className="rounded-image"
-              />
-            </div>
-            <div className="service-text">
-              <h3 className="text-2xl font-semibold text-navyBlue mb-4">Monitoring and Evaluation</h3>
-              <p className="text-lg text-gray-700">
-                Our Monitoring and Evaluation (M&E) services are designed to help businesses and organizations track their progress, measure outcomes, and assess the effectiveness of their projects. We utilize robust M&E frameworks that provide actionable insights.
-              </p>
-            </div>
-          </div>
+    {/* Service 3 */}
+    <div className="service-container flex flex-col items-start gap-6">
+      <div className="service-text">
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">Monitoring and Evaluation</h3>
+        <p className="text-lg text-gray-700">
+          Our Monitoring and Evaluation (M&E) services are designed to help businesses and organizations track their progress, measure outcomes, and assess the effectiveness of their projects. We utilize robust M&E frameworks that provide actionable insights.
+        </p>
+      </div>
+    </div>
 
-          {/* Service 4 */}
-          <div className="service-container flex flex-col md:flex-row-reverse items-center gap-6">
-            <div className="service-image">
-              <img
-                src="/program4.jpeg"
-                alt="Data Analytics Setup"
-                className="rounded-image"
-              />
-            </div>
-            <div className="service-text">
-              <h3 className="text-2xl font-semibold text-navyBlue mb-4">Data Analytics Setup</h3>
-              <p className="text-lg text-gray-700">
-                Our Data Analytics Setup service enables organizations to collect, process, and analyze data effectively. We provide comprehensive data strategies that help you make informed decisions, predict trends, and gain a competitive edge.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    {/* Service 4 */}
+    <div className="service-container flex flex-col items-start gap-6">
+      <div className="service-text">
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">Data Analytics Setup</h3>
+        <p className="text-lg text-gray-700">
+          Our Data Analytics Setup service enables organizations to collect, process, and analyze data effectively. We provide comprehensive data strategies that help you make informed decisions, predict trends, and gain a competitive edge.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
      {/* Why Choose Us and Testimonials Section */}
