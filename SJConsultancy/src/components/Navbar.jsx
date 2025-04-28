@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import {
   Home,
   BookOpen,
-  LogIn,
-  MessageSquare,
-  HelpCircle,
+  Phone,
+  GraduationCap,
+  ChevronDown,
   FileText,
   Calendar,
-  GraduationCap,
-  Phone,
   Folder,
+  MessageSquare,
+  HelpCircle,
   User,
-  ChevronDown,
+  LogIn,
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -22,6 +22,8 @@ const Navbar = () => {
   const [profileOpen, setProfileOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
+  const closeMenu = () => setMenuOpen(false); // Function to close the menu
+
   const toggleServices = () => setServicesOpen(!servicesOpen);
   const toggleResources = () => setResourcesOpen(!resourcesOpen);
   const toggleProfile = () => setProfileOpen(!profileOpen);
@@ -35,21 +37,20 @@ const Navbar = () => {
         ☰
       </button>
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-        {/* Main Links */}
         <li>
-          <Link to="/">
+          <Link to="/" onClick={closeMenu}>
             <Home />
             Home
           </Link>
         </li>
         <li>
-          <Link to="/aboutus">
+          <Link to="/aboutus" onClick={closeMenu}>
             <BookOpen />
             About Us
           </Link>
         </li>
         <li>
-          <Link to="/contactus">
+          <Link to="/contactus" onClick={closeMenu}>
             <Phone />
             Contact Us
           </Link>
@@ -64,19 +65,19 @@ const Navbar = () => {
           {servicesOpen && (
             <ul className="dropdown-menu">
               <li>
-                <Link to="/blogs">
+                <Link to="/blogs" onClick={closeMenu}>
                   <FileText />
                   Blogs and Events
                 </Link>
               </li>
               <li>
-                <Link to="/bookings">
+                <Link to="/bookings" onClick={closeMenu}>
                   <Calendar />
                   Bookings
                 </Link>
               </li>
               <li>
-                <Link to="/programs">
+                <Link to="/programs" onClick={closeMenu}>
                   <GraduationCap />
                   Programs
                 </Link>
@@ -94,19 +95,19 @@ const Navbar = () => {
           {resourcesOpen && (
             <ul className="dropdown-menu">
               <li>
-                <Link to="/testimonials">
+                <Link to="/testimonials" onClick={closeMenu}>
                   <MessageSquare />
                   Testimonials
                 </Link>
               </li>
               <li>
-                <Link to="/case-studies">
+                <Link to="/case-studies" onClick={closeMenu}>
                   <Folder />
                   Case Studies
                 </Link>
               </li>
               <li>
-                <Link to="/faqs">
+                <Link to="/faqs" onClick={closeMenu}>
                   <HelpCircle />
                   FAQs
                 </Link>
@@ -124,13 +125,13 @@ const Navbar = () => {
           {profileOpen && (
             <ul className="dropdown-menu">
               <li>
-                <Link to="/profile">
+                <Link to="/profile" onClick={closeMenu}>
                   <User />
                   Profile
                 </Link>
               </li>
               <li>
-                <Link to="/logout">
+                <Link to="/logout" onClick={closeMenu}>
                   <LogIn />
                   Logout
                 </Link>
