@@ -585,6 +585,7 @@ html, body {
     border-radius: 0; /* Remove rounded corners */
     display: none; /* Hidden by default */
     width: 100%; /* Full width */
+    margin-top: 10px;
   }
 
   .navbar .dropdown:hover .dropdown-menu {
@@ -599,6 +600,13 @@ html, body {
   .navbar .dropdown-menu li:hover {
     background-color: #008080; /* Teal on hover */
   }
+  .nav-links li {
+    margin-top: 10px;
+  }
+  .navbar .dropdown {
+    margin-bottom: 10px; /* Add spacing between dropdowns */
+  }
+  
 }
 
 /* Responsive Design */
