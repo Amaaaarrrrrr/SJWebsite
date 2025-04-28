@@ -556,18 +556,49 @@ html, body {
   overflow: hidden;
   display: none;
   flex-direction: column;
+  z-index: 1000;
+  min-width: 200px; /* Ensures consistent width */
 }
 
 .navbar .dropdown-menu li {
   padding: 10px 20px;
+  color: #FFFFFF; /* White text */
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar .dropdown-menu li:hover {
   background-color: #003366;
+  color: #FFD700;
 }
 
 .navbar .dropdown:hover .dropdown-menu {
   display: flex;
+}
+/* Responsive Dropdown Menu */
+@media (max-width: 768px) {
+  .navbar .dropdown-menu {
+    position: static; /* Remove absolute positioning */
+    background-color: #005F56; /* Match navbar background */
+    box-shadow: none; /* Remove shadow */
+    border-radius: 0; /* Remove rounded corners */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width */
+  }
+
+  .navbar .dropdown:hover .dropdown-menu {
+    display: flex; /* Show dropdown on hover */
+  }
+
+  .navbar .dropdown-menu li {
+    padding: 15px 20px;
+    text-align: left; /* Align text to the left */
+  }
+
+  .navbar .dropdown-menu li:hover {
+    background-color: #008080; /* Teal on hover */
+  }
 }
 
 /* Responsive Design */
