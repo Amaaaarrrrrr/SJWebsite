@@ -50,12 +50,6 @@ const Navbar = () => {
             Contact Us
           </Link>
         </li>
-        {/* <li>
-          <Link to="/auth">
-            <LogIn />
-            Signup/Login
-          </Link>
-        </li> */}
 
         {/* Services Dropdown */}
         <li className="dropdown">
