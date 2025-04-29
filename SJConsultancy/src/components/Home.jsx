@@ -20,7 +20,7 @@ const Home = () => {
      {/* Logo Section */}
      <header className="logo-section text-center text-white">
         <div className="overlay">
-          <h1 className="text-4xl font-bold mb-4">S.J Consultancy</h1>
+          <h1 className="text-4xl font-bold mb-4"> BIZITEL SOLUTION</h1>
           <p className="text-lg mb-6">Empowering Innovation and Technology</p>
           <div className="cta-buttons">
             <a href="/bookings" className="cta-button">Book Us Now</a>
@@ -46,7 +46,7 @@ const Home = () => {
           <div className="about-us-info">
             <h2 className="text-3xl font-bold text-navyBlue mb-6">About Us</h2>
             <p className="text-lg text-gray-700 mb-6">
-              S.J Consultancy is a premier business development and training firm specializing in SIYB (Start and Improve Your Business) training, Data Analytics, and Monitoring & Evaluation (M&E) Research. Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
+            BIZITEL  SOLUTION is a premier  Research, Data Analytics, business development, and training firm specializing in SIYB (Start and Improve Your Business) training and Monitoring & Evaluation (M&E) . Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
             </p>
             <a
               href="/aboutus"

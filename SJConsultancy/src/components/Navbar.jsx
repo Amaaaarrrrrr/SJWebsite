@@ -7,24 +7,26 @@ import {
   GraduationCap,
   ChevronDown,
   FileText,
+  BarChart2,
+  Briefcase,
+  Layers,
   Calendar,
-  Folder,
-  MessageSquare,
-  HelpCircle,
   User,
   LogIn,
 } from 'lucide-react';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [exploreOpen, setExploreOpen] = useState(false);
+  const [activitiesOpen, setActivitiesOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false); // Function to close the menu
+  const closeMenu = () => setMenuOpen(false);
 
-  const toggleServices = () => setServicesOpen(!servicesOpen);
+  const toggleExplore = () => setExploreOpen(!exploreOpen);
+  const toggleActivities = () => setActivitiesOpen(!activitiesOpen);
   const toggleResources = () => setResourcesOpen(!resourcesOpen);
   const toggleProfile = () => setProfileOpen(!profileOpen);
 
@@ -58,11 +60,41 @@ const Navbar = () => {
 
         {/* Services Dropdown */}
         <li className="dropdown">
-          <button onClick={toggleServices} className="dropdown-toggle">
+          <button onClick={toggleExplore} className="dropdown-toggle">
             <GraduationCap />
             Services <ChevronDown />
           </button>
-          {servicesOpen && (
+          {exploreOpen && (
+            <ul className="dropdown-menu">
+              <li>
+                <Link to="/services/data-analytics" onClick={closeMenu}>
+                  <BarChart2 />
+                  Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/siyb-training" onClick={closeMenu}>
+                  <Briefcase />
+                  SIYB Training
+                </Link>
+              </li>
+              <li>
+                <Link to="/services/monitoring-evaluation" onClick={closeMenu}>
+                  <Layers />
+                  Monitoring & Evaluation
+                </Link>
+              </li>
+            </ul>
+          )}
+        </li>
+
+        {/* Activities Dropdown */}
+        <li className="dropdown">
+          <button onClick={toggleActivities} className="dropdown-toggle">
+            <GraduationCap />
+            Activities <ChevronDown />
+          </button>
+          {activitiesOpen && (
             <ul className="dropdown-menu">
               <li>
                 <Link to="/blogs" onClick={closeMenu}>
@@ -89,26 +121,23 @@ const Navbar = () => {
         {/* Resources Dropdown */}
         <li className="dropdown">
           <button onClick={toggleResources} className="dropdown-toggle">
-            <Folder />
+            <FileText />
             Resources <ChevronDown />
           </button>
           {resourcesOpen && (
             <ul className="dropdown-menu">
               <li>
                 <Link to="/testimonials" onClick={closeMenu}>
-                  <MessageSquare />
                   Testimonials
                 </Link>
               </li>
               <li>
                 <Link to="/case-studies" onClick={closeMenu}>
-                  <Folder />
                   Case Studies
                 </Link>
               </li>
               <li>
                 <Link to="/faqs" onClick={closeMenu}>
-                  <HelpCircle />
                   FAQs
                 </Link>
               </li>
@@ -126,7 +155,6 @@ const Navbar = () => {
             <ul className="dropdown-menu">
               <li>
                 <Link to="/profile" onClick={closeMenu}>
-                  <User />
                   Profile
                 </Link>
               </li>
