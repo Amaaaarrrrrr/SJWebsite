@@ -5,7 +5,7 @@ const UserProfile = () => {
   const navigate = useNavigate();
 
   const [userData, setUserData] = useState({
-    name: 'John Doe',
+    name: 'Kuriamat',
     email: 'john.doe@example.com',
     profilePicture: '/profile.png',
   });

@@ -1,120 +1,143 @@
 import React from 'react';
+import './AboutUs.css'; 
 
 const AboutUs = () => {
   const teamMembers = [
     {
       name: 'John Doe',
       role: 'CEO & Founder',
-      description: 'John has over 20 years of experience in business consulting and has successfully led numerous startups to success. His expertise lies in strategic planning and operational efficiency.',
+      description: 'John has over 20 years of consulting experience, leading businesses to sustainable growth through innovative strategies.',
       image: '/john-doe.jpeg',
     },
     {
       name: 'Jane Smith',
       role: 'Lead Consultant',
-      description: 'With a background in digital transformation, Jane specializes in guiding businesses through the complexities of data analytics and technology implementation to drive growth and innovation.',
+      description: 'Jane drives digital transformation for clients, specializing in analytics, technology adoption, and strategic execution.',
       image: '/jane-smith.jpeg',
     },
     {
       name: 'Mark Johnson',
       role: 'Senior Business Analyst',
-      description: 'Mark is a data-driven professional with a deep understanding of market trends. He helps clients make informed decisions based on thorough analysis and actionable insights.',
+      description: 'Mark’s market insights and data-driven strategies empower businesses to make smarter, results-focused decisions.',
       image: '/mark-johnson.jpeg',
     },
     {
       name: 'Emma Brown',
       role: 'Training & Development Manager',
-      description: 'Emma designs and facilitates training programs that empower businesses and their employees to harness the power of new technologies and skills, ensuring long-term success.',
+      description: 'Emma builds powerful training solutions that transform teams, enhance technology adoption, and fuel business success.',
       image: '/emma-brown.jpeg',
     },
     {
       name: 'Lucas Green',
       role: 'Marketing Director',
-      description: 'Lucas is an expert in digital marketing and customer engagement strategies. He leads our efforts to create compelling campaigns that elevate our clients’ brands and drive market growth.',
+      description: 'Lucas leads marketing innovation and customer engagement, crafting impactful campaigns that drive brand growth.',
       image: '/lucas-green.jpeg',
     },
   ];
 
   return (
-    
-      <div className="about-us-container-unique max-w-6xl mx-auto text-center">
-        {/* Section Title */}
-        <div className="about-us-title-container bg-cover bg-center py-16 px-4 rounded-lg shadow-md" style={{ backgroundImage: "url('/aboutbkg.jpg')" }}>
-          <h1 className="about-us-title-unique text-4xl font-bold text-white mb-6">About Us</h1>
-          {/* About Us Description */}
-          <div className="about-us-description-container">
-            <p className="about-us-description-unique text-lg text-white mb-8 max-w-4xl mx-auto">
-              S.J Consultancy is a leading provider of business solutions, technology integration, and strategic consulting services. 
-              Our team of certified experts is dedicated to helping businesses grow through data-driven insights, actionable strategies, and hands-on support. We empower entrepreneurs, startups, and established organizations to unlock their full potential with personalized solutions tailored to their unique needs. Our goal is to drive lasting impact and tangible results in every project we undertake.
-            </p>
-          </div>
-        </div>
+    <div className="about-us-container-unique max-w-7xl mx-auto text-center p-6">
 
-        
+      {/* Section Title */}
+      <div 
+        className="about-us-title-container bg-cover bg-center py-20 px-6 rounded-lg shadow-md" 
+        style={{ backgroundImage: "url('/aboutbkg.jpg')" }}
+      >
+        <h1 className="text-5xl font-bold text-white mb-6">ABOUT <br/>BIZITEL SOLUTION</h1>
+        <p className="text-xl text- gold mb-8 max-w-5xl mx-auto">
+          <strong className="text-xl text-black mb-8 max-w-5xl mx-auto hover:text-gold hover:scale-105 transition duration-300 inline-block">
+            BIZITEL SOLUTION is a premier research, data analytics, business development, and training firm specializing in SIYB and Monitoring & Evaluation (M&E).
+            Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
+          </strong>
+        </p>
+      </div>
 
-        {/* Vision and Mission */}
-        <div className="about-us-vision-mission-container">
-          <div className="about-us-grid-unique grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-            {/* Vision Section */}
-            <div className="about-us-card-unique bg-white p-8 rounded-lg shadow-md">
-              <h2 className="about-us-card-title-unique text-2xl font-semibold text-navyBlue mb-4">Our Vision</h2>
-              <p className="about-us-card-description-unique text-lg text-gray-700">
-                To become the leading consultancy firm that transforms businesses with innovative, sustainable, and data-driven solutions, creating lasting growth and value for our clients.
-              </p>
-            </div>
+      {/* Our Story */}
+      <div className="bg-white p-8 rounded-lg shadow-md my-16">
+        <h2 className="text-4xl font-bold text-deepGreen mb-6">Our Story</h2>
+        <p className="text-lg text-gray-700 mb-4">
+          BIZITEL SOLUTION was founded with a vision to bridge the gap between data and actionable strategies for businesses.  It began as a small team of passionate consultants, driven by the belief that every organization, regardless of size, deserves access to expert guidance and data-driven insights.
+        </p>
+        <p className="text-lg text-gray-700 mb-4">
+          From our early work with local entrepreneurs, we quickly recognized the transformative power of SIYB training and the critical need for effective Monitoring & Evaluation. This realization shaped our focus and led us to specialize in these areas.
+        </p>
+        <p className="text-lg text-gray-700">
+          Today, we are proud to have partnered with numerous organizations, from startups to established enterprises, helping them achieve sustainable growth and make data-informed decisions that drive real-world impact. Our journey is one of continuous learning, innovation, and a deep commitment to our clients' success.
+        </p>
+      </div>
 
-            {/* Mission Section */}
-            <div className="about-us-card-unique bg-white p-8 rounded-lg shadow-md">
-              <h2 className="about-us-card-title-unique text-2xl font-semibold text-navyBlue mb-4">Our Mission</h2>
-              <p className="about-us-card-description-unique text-lg text-gray-700">
-                Our mission is to empower businesses with customized strategies, comprehensive training, and efficient operations that enable them to thrive in today’s competitive marketplace. We aim to build strong, long-lasting partnerships with our clients, helping them realize their full potential.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Values Section */}
-        <div className="about-us-values-container text-center mb-12">
-          <h2 className="about-us-values-title-unique text-3xl font-bold text-navyBlue mb-6">Our Core Values</h2>
-          <ul className="about-us-values-list-unique text-lg text-gray-700 space-y-4">
-            <li><strong>Integrity:</strong> We believe in doing the right thing, even when no one is looking.</li>
-            <li><strong>Innovation:</strong> We continuously strive for creative solutions that solve our clients' challenges.</li>
-            <li><strong>Excellence:</strong> We deliver the highest quality service to help clients achieve remarkable outcomes.</li>
-            <li><strong>Collaboration:</strong> We work hand-in-hand with clients to ensure success through partnership and mutual respect.</li>
-            <li><strong>Client-Centric Approach:</strong> We put our clients at the heart of everything we do, ensuring their needs are met with precision and care.</li>
-          </ul>
-        </div>
-
-        {/* Team Section */}
-        <div className="about-us-team-container">
-          <h2 className="about-us-team-title-unique text-3xl font-bold text-navyBlue mb-6">Meet Our Team</h2>
-          <div className="about-us-team-grid-unique grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="about-us-team-card-unique bg-white p-6 rounded-lg shadow-md">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="about-us-team-image-unique w-full h-64 object-cover rounded-lg mb-4"
-                />
-                <h3 className="about-us-team-name-unique text-2xl font-semibold text-navyBlue mb-2">{member.name}</h3>
-                <p className="about-us-team-role-unique text-lg font-semibold text-gray-600">{member.role}</p>
-                <p className="about-us-team-description-unique text-gray-700 mt-4">{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Call to Action Section */}
-        <div className="about-us-cta-container bg-deepGreen text-white py-6 px-4 rounded-lg mt-12">
-          <h3 className="about-us-cta-title-unique text-2xl font-semibold mb-4">Ready to work with us?</h3>
-          <p className="about-us-cta-description-unique text-lg mb-6">
-            Whether you're just starting or scaling your business, we are here to help you succeed. Book a consultation with us today and start your journey towards growth and success.
+      {/* Vision and Mission */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-16">
+        {/* Vision */}
+        <div className="bg-white p-8 rounded-lg shadow-md">
+          <h2 className="text-3xl font-semibold text-deepGreen mb-4">Our Vision</h2>
+          <p className="text-lg text-gray-700">
+            To be the consultancy of choice that powers business excellence through innovative data-driven solutions, entrepreneurship training, and strategic partnerships.
           </p>
-          <a href="/bookings" className="about-us-cta-button-unique bg-gold text-white py-3 px-6 rounded-full hover:bg-yellow-400 transition">
-            Book Us Now
-          </a>
+        </div>
+
+        {/* Mission */}
+        <div className="bg-white p-8 rounded-lg shadow-md">
+          <h2 className="text-3xl font-semibold text-deepGreen mb-4">Our Mission</h2>
+          <p className="text-lg text-gray-700">
+            We empower businesses, entrepreneurs, and organizations through research, strategic consulting, data analytics, and specialized training programs.
+          </p>
         </div>
       </div>
-    
+
+      {/* Core Values */}
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold text-deepGreen mb-8">Our Core Values</h2>
+        <ul className="text-lg text-gray-700 space-y-4">
+          <li><strong>Integrity:</strong> Upholding transparency and accountability in every engagement.</li>
+          <li><strong>Innovation:</strong> Continuously delivering cutting-edge solutions for growth.</li>
+          <li><strong>Excellence:</strong> Pursuing superior quality and results in everything we do.</li>
+          <li><strong>Collaboration:</strong> Building strong, meaningful partnerships for mutual success.</li>
+          <li><strong>Client-Centricity:</strong> Tailoring solutions to the unique needs of our clients.</li>
+        </ul>
+      </div>
+
+      {/* Affiliations */}
+      <div className="bg-white p-8 rounded-lg shadow-md mb-16">
+        <h2 className="text-4xl font-bold text-deepGreen mb-6">Affiliations & Partnerships</h2>
+        <p className="text-lg text-gray-700">
+          We proudly collaborate with leading organizations such as the International Labour Organization (ILO), government agencies, business incubators, and development partners to deliver lasting impact.
+        </p>
+      </div>
+
+      {/* Meet the Team */}
+      <div>
+        <h2 className="text-4xl font-bold text-deepGreen mb-8">Meet Our Team</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {teamMembers.map((member, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h3 className="text-2xl font-semibold text-deepGreen mb-2">{member.name}</h3>
+              <p className="text-lg font-semibold text-gray-600">{member.role}</p>
+              <p className="text-gray-700 mt-4">{member.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-deepGreen text-white py-10 px-8 rounded-lg mt-20">
+        <h3 className="text-3xl font-semibold mb-4">Ready to unlock your potential?</h3>
+        <p className="text-lg mb-6">
+          Partner with BIZITEL SOLUTION to leverage research, analytics, and world-class training to elevate your business. Book a free consultation now!
+        </p>
+        <a
+          href="/bookings"
+          className="bg-gold text-white py-3 px-8 rounded-full hover:bg-yellow-400 transition duration-300"
+        >
+          Book Us Now
+        </a>
+      </div>
+    </div>
   );
 };
 

@@ -18,6 +18,9 @@ import ProgramsPage from './pages/ProgramsPage';
 import TestimonialPage from './pages/TestimonialPage';
 import AuthPage from './pages/AuthPage';
 import AboutUs from './components/AboutUs';
+import DataAnalysis from './components/DataAnalysis';
+import SIYBTraining from './components/SIYBTraining';
+import Portfolio from './components/Portfolio';
 
 function App() {
   return (
@@ -39,6 +42,10 @@ function App() {
         <Route path="/auth" element={<AuthPage />} />
         <Route path="/testimonials" element={<TestimonialPage />} />
         <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/DataAnalysis" element={<DataAnalysis />} />
+        <Route path="/syib-training" element={<SIYBTraining />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        {/* Add more routes as needed */}
       </Routes>
       <Footer />
     </Router>

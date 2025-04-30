@@ -1,0 +1,14 @@
+.moving-text {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: moveText 20s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(100%); /* Start offscreen */
+  }
+  100% {
+    transform: translateX(-100%); /* Move completely offscreen to the left */
+  }
+}

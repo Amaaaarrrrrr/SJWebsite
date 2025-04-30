@@ -8,9 +8,11 @@ function Booking() {
     service: '',
     message: '',
     date: '',
+    time: '', // Added time field
   });
 
   const [successMessage, setSuccessMessage] = useState('');
+  const [timeError, setTimeError] = useState(''); // Added time error state
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -19,13 +21,23 @@ function Booking() {
       ...prevData,
       [name]: value,
     }));
+    if (name === 'time') {
+      setTimeError(''); // Clear time error when time changes
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Validate time
+    const selectedTime = parseInt(formData.time.split(':')[0]); // Extract hour
+    if (selectedTime < 8 || selectedTime > 18) {
+      setTimeError('Please select a time between 8 AM and 6 PM.');
+      return;
+    }
+
     setSuccessMessage('Thank you! Your booking has been received. You will be redirected to the payments page shortly.');
-    setFormData({ name: '', email: '', service: '', message: '', date: '' });
+    setFormData({ name: '', email: '', service: '', message: '', date: '', time: '' }); // Clear time as well
 
     // Clear the success message after 5 seconds
     setTimeout(() => {
@@ -114,6 +126,20 @@ function Booking() {
               required
               className="booking-form-input w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
             />
+          </div>
+
+          {/* Time Selection */}
+          <div className="booking-form-group mb-6">
+            <label className="booking-form-label block text-gray-700 mb-2">Preferred Time (8 AM - 6 PM)</label>
+            <input
+              type="time"
+              name="time"
+              value={formData.time}
+              onChange={handleChange}
+              required
+              className="booking-form-input w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
+            />
+            {timeError && <p className="text-red-500 text-sm mt-1">{timeError}</p>}
           </div>
 
           <button
