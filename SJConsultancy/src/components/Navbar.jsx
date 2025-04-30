@@ -12,7 +12,7 @@ import {
   MessageSquare,
   HelpCircle,
   User,
-  LogIn,
+
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -53,7 +53,7 @@ const Navbar = () => {
         </li>
 
         {/* Services Dropdown */}
-        <li className="dropdown">
+       /* <li className="dropdown">
           <button onClick={toggleServices} className="dropdown-toggle">
             <GraduationCap />
             Services <ChevronDown />
@@ -80,7 +80,7 @@ const Navbar = () => {
               </li>
             </ul>
           )}
-        </li>
+        </li>*/
 
         {/* Resources Dropdown */}
         <li className="dropdown">
@@ -112,7 +112,7 @@ const Navbar = () => {
           )}
         </li>
 
-        {/* Profile Dropdown */}
+        {/* Profile Dropdown
         <li className="dropdown">
           <button onClick={toggleProfile} className="dropdown-toggle">
             <User />
@@ -128,13 +128,13 @@ const Navbar = () => {
               </li>
               <li>
                 <Link to="/logout" onClick={closeMenu}>
-                  <LogIn />
+                  <kc />
                   Logout
                 </Link>
               </li>
             </ul>
           )}
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
