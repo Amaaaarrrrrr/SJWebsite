@@ -48,6 +48,7 @@ function App() {
         <Route path="/DataAnalysis" element={<DataAnalysis />} />
         <Route path="/SIYBTraining" element={<SIYBTraining />} />
         <Route path="/portfolio" element={<Portfolio />} />
+        
       </Routes>
       <Footer />
     </Router>

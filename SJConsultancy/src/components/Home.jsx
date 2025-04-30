@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [activeFAQ, setActiveFAQ] = useState(null);
@@ -12,7 +11,7 @@ const Home = () => {
     "Transforming Ideas into Reality",
     "Driving Success Through Data",
   ];
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTagline((prevTagline) => (prevTagline + 1) % taglines.length);
@@ -52,36 +51,8 @@ const Home = () => {
         </div>
       </header>
 
-      {/* Emphasized Data Analytics Section */}
-      <section className="DataAnalysis-section py-12 px-4 md:px-12">
-        <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Data Analytics</h2>
-        <p className="text-lg text-gray-700 text-center mb-6">
-          Unlock the power of your data with our comprehensive data analytics services. We transform raw data into actionable insights, helping you make informed decisions and drive business growth.
-        </p>
-        <div className="text-center">
-          <Link to="/DataAnalysis" className="cta-button">Learn More</Link>
-        </div>
-        <div className="flex justify-center mt-8">
-          <img src="/portfolio.jpg" alt="Data Analytics" className="rounded-lg shadow-md w-2/3" />
-        </div>
-      </section>
-
-      {/* Emphasized SIYB Training Section */}
-      <section className="SIYBTraining-section py-12 px-4 md:px-12 bg-lightGray">
-        <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">SIYB Training</h2>
-        <p className="text-lg text-gray-700 text-center mb-6">
-          Empower entrepreneurs and businesses with our SIYB (Start and Improve Your Business) training programs. Gain the skills and knowledge needed for sustainable growth and success.
-        </p>
-        <div className="text-center">
-          <Link to="/SIYBTraining" className="cta-button">Learn More</Link>
-        </div>
-        <div className="flex justify-center mt-8">
-          <img src="/SIYBTraining.jpg" alt="SIYB Training" className="rounded-lg shadow-md w-2/3" />
-        </div>
-      </section>
-
-      {/* About Us Section */}
-      <section className="about-us-section py-12 px-4 md:px-12">
+    {/* About Us Section */}
+    <section className="about-us-section py-12 px-4 md:px-12">
         <div className="about-us-container">
           {/* Left Side: Gallery */}
           <div className="gallery">
@@ -90,6 +61,7 @@ const Home = () => {
               alt="About Us 1"
               className="rounded-lg shadow-md"
             />
+            
           </div>
 
           {/* Right Side: About Us Information */}
@@ -107,15 +79,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Taglines Section */}
-      <section className="taglines-section py-12 px-4 md:px-12 bg-lightGray text-center">
-        <h3 className="text-2xl font-bold text-navyBlue mb-6">Our Taglines</h3>
-        <p className="text-lg text-gray-700 mb-4">Empowering Growth</p>
-        <p className="text-lg text-gray-700 mb-4">Transforming Data into Actionable Insights</p>
-        <p className="text-lg text-gray-700 mb-4">Training the Entrepreneurs of Tomorrow</p>
-        <p className="text-lg text-gray-700 mb-4">Building a Sustainable Future through Research</p>
-        <p className="text-lg text-gray-700 mb-4">Data-Driven Decisions, Real-World Impact</p>
+      {/* Quotes */}
+      <section className="py-12 px-4 md:px-12 bg-deepGreen text-white text-center">
+        <p className="italic text-lg">"Innovation distinguishes between a leader and a follower." — Steve Jobs</p>
+        <p className="italic text-lg mt-4">"Success usually comes to those who are too busy to be looking for it." — Henry David Thoreau</p>
       </section>
 
 
@@ -133,22 +100,16 @@ const Home = () => {
       </div>
     </div>
 
-          {/* Service 2 */}
-          <div className="service-container flex flex-col md:flex-row-reverse items-center gap-6">
-            <div className="service-image">
-              <img
-                src="/program2.jpeg"
-                alt="Training and Workshops"
-                className="rounded-image"
-              />
-            </div>
-            <div className="service-text">
-              <h3 className="text-2xl font-semibold text-navyBlue mb-4">Training and Workshops</h3>
-              <p className="text-lg text-gray-700">
-                We offer specialized training and workshops that focus on empowering your team with the skills and knowledge they need to thrive in today's dynamic business environment. Our hands-on, practical approach ensures that your employees are equipped with real-world solutions.
-              </p>
-            </div>
-          </div>
+    {/* Service 2 */}
+    <div className="service-container flex flex-col items-start gap-6">
+      <div className="service-text">
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">SIYB Training</h3>
+        
+        <p className="text-lg text-gray-700">
+          We offer specialized training and workshops that focus on empowering your team with the skills and knowledge they need to thrive in today's dynamic business environment. Our hands-on, practical approach ensures that your employees are equipped with real-world solutions.
+        </p>
+      </div>
+    </div>
 
     {/* Service 3 */}
     <div className="service-container flex flex-col items-start gap-6">
@@ -182,44 +143,44 @@ const Home = () => {
 </section>
 
 
-      {/* Why Choose Us and Testimonials Section */}
-      <section className="why-testimonials-section py-12 px-4 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          {/* Why Choose Us */}
-          <div className="why-choose-us bg-deepBlue p-6 rounded-lg shadow-md">
-            <h2 className="text-3xl font-bold text-center text-white mb-6">Why Choose Us</h2>
-            <h3 className="text-xl font-semibold text-gold mb-4">Data-Driven & SIYB Expertise</h3>
-            <p className="text-white mb-4">
-              We combine data analytics with SIYB methodologies to empower businesses and entrepreneurs for sustainable growth.
-            </p>
-            <h3 className="text-xl font-semibold text-gold mb-4">Advanced Analytics Techniques</h3>
-            <p className="text-white mb-4">
-              We utilize cutting-edge tools and methodologies, including machine learning and predictive modeling, to uncover hidden patterns and forecast future trends.
-            </p>
-            <h3 className="text-xl font-semibold text-gold mb-4">Customized Data & Training Solutions</h3>
-            <p className="text-white">
-              We tailor both our data analytics and SIYB training to your specific business needs, ensuring relevant and impactful insights and skills.
-            </p>
-          </div>
+     {/* Why Choose Us and Testimonials Section */}
+<section className="why-testimonials-section py-12 px-4 md:px-12">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    {/* Why Choose Us */}
+    <div className="why-choose-us">
+      <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Why Choose Us</h2>
+      <h3 className="text-xl font-semibold text-deepGreen mb-4">Certified SIYB Trainers</h3>
+      <p className="text-gray-600 mb-4">
+        Our trainers are certified by the SIYB program and possess extensive experience in delivering high-quality business training.
+      </p>
+      <h3 className="text-xl font-semibold text-deepGreen mb-4">Proven Track Record</h3>
+      <p className="text-gray-600 mb-4">
+        We have a proven track record of using data-driven business solutions to help companies grow and succeed in competitive markets.
+      </p>
+      <h3 className="text-xl font-semibold text-deepGreen mb-4">Customized Approach</h3>
+      <p className="text-gray-600">
+        We take a client-centric approach, tailoring our solutions to meet the unique needs of each business we work with.
+      </p>
+    </div>
 
-          {/* Testimonials */}
-          <div className="testimonials">
-            <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">What Our Clients Say</h2>
-            <p className="text-gray-700 italic mb-6">
-              "BIZITEL SOLUTION transformed our business operations and helped us achieve sustainable growth."
-            </p>
-            <h4 className="text-navyBlue font-bold mb-6">— John Doe, CEO</h4>
-            <p className="text-gray-700 italic mb-6">
-              "The training workshops were incredibly insightful and practical. Our team is now more confident and skilled."
-            </p>
-            <h4 className="text-navyBlue font-bold mb-6">— Jane Smith, Manager</h4>
-            <p className="text-gray-700 italic">
-              "Their data analytics setup gave us the tools we needed to make informed decisions and stay ahead of the competition."
-            </p>
-            <h4 className="text-navyBlue font-bold">— Sarah Lee, Business Owner</h4>
-          </div>
-        </div>
-      </section>
+    {/* Testimonials */}
+    <div className="testimonials">
+      <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">What Our Clients Say</h2>
+      <p className="text-gray-700 italic mb-6">
+        "S.J Consultancy transformed our business operations and helped us achieve sustainable growth."
+      </p>
+      <h4 className="text-navyBlue font-bold mb-6">— John Doe, CEO</h4>
+      <p className="text-gray-700 italic mb-6">
+        "The training workshops were incredibly insightful and practical. Our team is now more confident and skilled."
+      </p>
+      <h4 className="text-navyBlue font-bold mb-6">— Jane Smith, Manager</h4>
+      <p className="text-gray-700 italic">
+        "Their data analytics setup gave us the tools we needed to make informed decisions and stay ahead of the competition."
+      </p>
+      <h4 className="text-navyBlue font-bold">— Emma Brown, Analyst</h4>
+    </div>
+  </div>
+</section>
 
 
 {/* Case Studies Section */}
@@ -441,36 +402,62 @@ const Home = () => {
               </div>
             </form>
           </div>
+  </div>
+</section>
 
-          <div className="faq-item mb-4">
-            <div
-              onClick={() => toggleFAQ(1)}
-              className="faq-question cursor-pointer text-lg text-navyBlue font-semibold mb-2"
-            >
-              How can I book a training session?
-            </div>
-            {activeFAQ === 1 && (
-              <div className="faq-answer text-gray-700">
-                You can book a training session through our website or by contacting us directly.
-              </div>
-            )}
-          </div>
+    {/* Latest Events and Blog Section */}
+<section className="latest-events-blog-section py-12 px-4 md:px-12 bg-white">
+  <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Latest Events & Blogs</h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* Event/Blog 1 */}
+    <div className="event-blog-item group bg-lightGray p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src="/events1.png"
+          alt="Event 1"
+          className="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300"
+        />
+      </div>
+      <h3 className="text-xl font-bold text-navyBlue mt-4 mb-2">Empowering Entrepreneurs</h3>
+      <p className="text-gray-700 mb-4">
+        Join us for an insightful workshop on empowering entrepreneurs with the tools they need to succeed.
+      </p>
+      
+    </div>
 
-          <div className="faq-item mb-4">
-            <div
-              onClick={() => toggleFAQ(2)}
-              className="faq-question cursor-pointer text-lg text-navyBlue font-semibold mb-2"
-            >
-              How long do the workshops last?
-            </div>
-            {activeFAQ === 2 && (
-              <div className="faq-answer text-gray-700">
-                Our workshops typically last between 1-2 days depending on the topic and level of detail.
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
+    {/* Event/Blog 2 */}
+    <div className="event-blog-item group bg-lightGray p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src="/events2.jpeg"
+          alt="Event 2"
+          className="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300"
+        />
+      </div>
+      <h3 className="text-xl font-bold text-navyBlue mt-4 mb-2">Data Analytics Trends</h3>
+      <p className="text-gray-700 mb-4">
+        Discover the latest trends in data analytics and how they can transform your business.
+      </p>
+      
+    </div>
+
+    {/* Event/Blog 3 */}
+    <div className="event-blog-item group bg-lightGray p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <div className="overflow-hidden rounded-lg">
+        <img
+          src="/events3.webp"
+          alt="Event 3"
+          className="w-full h-48 object-cover transform group-hover:scale-110 transition duration-300"
+        />
+      </div>
+      <h3 className="text-xl font-bold text-navyBlue mt-4 mb-2">Innovative Business Solutions</h3>
+      <p className="text-gray-700 mb-4">
+        Learn about innovative business solutions that can help you stay ahead in competitive markets.
+      </p>
+      
+    </div>
+  </div>
+</section>
     </div>
   );
 };
