@@ -1,17 +1,18 @@
+App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Homepage from './components/Home';
+import Home from './components/Home';
 import Blogs from './components/Blogs';
 import BlogDetails from './pages/BlogDetails';
 // import Register from './components/Register';
 // import UserProfile from './components/User';
 import BookingPage from './pages/BookingPage';
-import CaseStudies from "./pages/CaseStudies";
-import ContactUs from "./pages/ContactUs";
+import CaseStudies from './pages/CaseStudies';
+import ContactUs from './pages/ContactUs';
 import FAQPage from './pages/FAQPage';
 import PaymentPage from './pages/PaymentPage';
 import ProgramsPage from './pages/ProgramsPage';
@@ -25,9 +26,11 @@ import Portfolio from './components/Portfolio';
 function App() {
   return (
     <Router>
-      {/* <AuthBar />  */}
-      <Navbar /> <Routes>
-        <Route path="/" element={<Homepage />} />
+      {/* <AuthBar /> */}
+      <Navbar />
+      <Routes>
+        {/* Main Routes */}
+        <Route path="/" element={<Home/>} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
         {/* <Route path="/register" element={<Register />} /> */}
@@ -43,9 +46,8 @@ function App() {
         <Route path="/testimonials" element={<TestimonialPage />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/DataAnalysis" element={<DataAnalysis />} />
-        <Route path="/syib-training" element={<SIYBTraining />} />
+        <Route path="/SIYBTraining" element={<SIYBTraining />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        {/* Add more routes as needed */}
       </Routes>
       <Footer />
     </Router>

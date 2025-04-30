@@ -7,31 +7,37 @@ import {
   GraduationCap,
   ChevronDown,
   FileText,
+  BarChart2,
+  Briefcase,
+  Layers,
   Calendar,
-  Folder,
-  MessageSquare,
-  HelpCircle,
   User,
-
+  LogIn,
+  Search,
+  MessageSquare,
+  Folder,
+  HelpCircle,
 } from 'lucide-react';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
-  const [profileOpen, setProfileOpen] = useState(false);
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-  const closeMenu = () => setMenuOpen(false); // Function to close the menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-  const toggleServices = () => setServicesOpen(!servicesOpen);
-  const toggleResources = () => setResourcesOpen(!resourcesOpen);
-  const toggleProfile = () => setProfileOpen(!profileOpen);
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
-      <div className="logo"><img src="/logo.png" alt="Logo" className="logo-image" /></div>
-      <button className="menu-toggle" onClick={toggleMenu}>☰</button>
+      <div className="logo">
+        <img src="/logo.png" alt="Logo" className="logo-image" />
+      </div>
+      <button className="menu-toggle" onClick={toggleMenu}>
+        ☰
+      </button>
       <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
         <li>
           <Link to="/" onClick={closeMenu}>
@@ -52,89 +58,54 @@ const Navbar = () => {
           </Link>
         </li>
 
-        {/* Services Dropdown */}
-       /* <li className="dropdown">
-          <button onClick={toggleServices} className="dropdown-toggle">
-            <GraduationCap />
-            Services <ChevronDown />
-          </button>
-          {servicesOpen && (
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/blogs" onClick={closeMenu}>
-                  <FileText />
-                  Blogs and Events
-                </Link>
-              </li>
-              <li>
-                <Link to="/bookings" onClick={closeMenu}>
-                  <Calendar />
-                  Bookings
-                </Link>
-              </li>
-              <li>
-                <Link to="/programs" onClick={closeMenu}>
-                  <GraduationCap />
-                  Programs
-                </Link>
-              </li>
-            </ul>
-          )}
-        </li>*/
-
-        {/* Resources Dropdown */}
-        <li className="dropdown">
-          <button onClick={toggleResources} className="dropdown-toggle">
-            <Folder />
-            Resources <ChevronDown />
-          </button>
-          {resourcesOpen && (
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/testimonials" onClick={closeMenu}>
-                  <MessageSquare />
-                  Testimonials
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" onClick={closeMenu}>
-                  <Folder />
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link to="/faqs" onClick={closeMenu}>
-                  <HelpCircle />
-                  FAQs
-                </Link>
-              </li>
-            </ul>
-          )}
+        <li>
+          <Link to="/bookings" onClick={closeMenu}>
+            <Calendar />
+            Bookings
+          </Link>
         </li>
 
-        {/* Profile Dropdown
-        <li className="dropdown">
-          <button onClick={toggleProfile} className="dropdown-toggle">
+        <li>
+          <Link to="/programs" onClick={closeMenu}>
+            <GraduationCap />
+            Programs
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/testimonials" onClick={closeMenu}>
+            <MessageSquare />
+            Testimonials
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/case-studies" onClick={closeMenu}>
+            <Folder />
+            Case Studies
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/faqs" onClick={closeMenu}>
+            <HelpCircle />
+            FAQs
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/auth" onClick={closeMenu}>
+            <LogIn />
+            Signup/Login
+          </Link>
+        </li>
+
+        <li>
+          <Link to="/profile" onClick={closeMenu}>
             <User />
-            Profile <ChevronDown />
-          </button>
-          {profileOpen && (
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/profile" onClick={closeMenu}>
-                  <User />
-                  Profile
-                </Link>
-              </li>
-              <li>
-                <Link to="/logout" onClick={closeMenu}>
-                  <kc />
-                  Logout
-                </Link>
-              </li>
-            </ul>
-          )}
-        </li> */}
+            Profile
+          </Link>
+        </li>
       </ul>
     </nav>
   );

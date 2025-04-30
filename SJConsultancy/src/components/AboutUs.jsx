@@ -36,35 +36,20 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="about-us-container-unique max-w-7xl mx-auto text-center p-6">
+    
+      <div className="about-us-container-unique max-w-6xl mx-auto text-center">
+        {/* Section Title */}
+        <div className="about-us-title-container bg-cover bg-center py-16 px-4 rounded-lg shadow-md" style={{ backgroundImage: "url('/aboutbkg.jpg')" }}>
+          <h1 className="about-us-title-unique text-4xl font-bold text-white mb-6">About Us</h1>
+          {/* About Us Description */}
+          <div className="about-us-description-container">
+            <p className="about-us-description-unique text-lg text-white mb-8 max-w-4xl mx-auto">
+            BIZITEL  SOLUTION is a premier  Research, Data Analytics, business development, and training firm specializing in SIYB (Start and Improve Your Business) training and Monitoring & Evaluation (M&E) . Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
+            </p>
+          </div>
+        </div>
 
-      {/* Section Title */}
-      <div 
-        className="about-us-title-container bg-cover bg-center py-20 px-6 rounded-lg shadow-md" 
-        style={{ backgroundImage: "url('/aboutbkg.jpg')" }}
-      >
-        <h1 className="text-5xl font-bold text-white mb-6">ABOUT <br/>BIZITEL SOLUTION</h1>
-        <p className="text-xl text- gold mb-8 max-w-5xl mx-auto">
-          <strong className="text-xl text-black mb-8 max-w-5xl mx-auto hover:text-gold hover:scale-105 transition duration-300 inline-block">
-            BIZITEL SOLUTION is a premier research, data analytics, business development, and training firm specializing in SIYB and Monitoring & Evaluation (M&E).
-            Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
-          </strong>
-        </p>
-      </div>
-
-      {/* Our Story */}
-      <div className="bg-white p-8 rounded-lg shadow-md my-16">
-        <h2 className="text-4xl font-bold text-deepGreen mb-6">Our Story</h2>
-        <p className="text-lg text-gray-700 mb-4">
-          BIZITEL SOLUTION was founded with a vision to bridge the gap between data and actionable strategies for businesses.  It began as a small team of passionate consultants, driven by the belief that every organization, regardless of size, deserves access to expert guidance and data-driven insights.
-        </p>
-        <p className="text-lg text-gray-700 mb-4">
-          From our early work with local entrepreneurs, we quickly recognized the transformative power of SIYB training and the critical need for effective Monitoring & Evaluation. This realization shaped our focus and led us to specialize in these areas.
-        </p>
-        <p className="text-lg text-gray-700">
-          Today, we are proud to have partnered with numerous organizations, from startups to established enterprises, helping them achieve sustainable growth and make data-informed decisions that drive real-world impact. Our journey is one of continuous learning, innovation, and a deep commitment to our clients' success.
-        </p>
-      </div>
+        
 
       {/* Vision and Mission */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 my-16">
