@@ -58,36 +58,41 @@ const Navbar = () => {
           </Link>
         </li>
 
-        {/* Services Dropdown */}
-        <li className="dropdown">
-          <button onClick={toggleExplore} className="dropdown-toggle">
-            <GraduationCap />
-            Services <ChevronDown />
-          </button>
-          {exploreOpen && (
-            <ul className="dropdown-menu">
-              <li>
-                <Link to="/services/data-analytics" onClick={closeMenu}>
-                  <BarChart2 />
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/siyb-training" onClick={closeMenu}>
-                  <Briefcase />
-                  SIYB Training
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/monitoring-evaluation" onClick={closeMenu}>
-                  <Layers />
-                  Monitoring & Evaluation
-                </Link>
-              </li>
-            </ul>
-          )}
-        </li>
-
+       {/* Services Dropdown */}
+<li className="dropdown">
+  <button onClick={toggleExplore} className="dropdown-toggle">
+    <GraduationCap />
+    Services <ChevronDown />
+  </button>
+  {exploreOpen && (
+    <ul className="dropdown-menu">
+      <li>
+        <Link to="/services/data-analytics" onClick={closeMenu}>
+          <BarChart2 />
+          Data Analytics
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/siyb-training" onClick={closeMenu}>
+          <Briefcase />
+          SIYB Training
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/monitoring-evaluation" onClick={closeMenu}>
+          <Layers />
+          Monitoring & Evaluation
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/business-consultancy" onClick={closeMenu}>
+          <Briefcase />
+          Business Consultancy
+        </Link>
+      </li>
+    </ul>
+  )}
+</li>
         {/* Activities Dropdown */}
         <li className="dropdown">
           <button onClick={toggleActivities} className="dropdown-toggle">

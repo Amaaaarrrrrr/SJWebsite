@@ -24,6 +24,7 @@ import AuthBar from './components/AuthBar';
 import SiybTraining from './pages/SiybTraining';
 import DataAnalytics from './pages/DataAnalytics';
 import MonitoringEvaluation from './pages/MonitoringEvaluation';
+import BusinessConsultancy from './pages/BusinessConsultancy';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/services/siyb-training" element={<SiybTraining />} />
         <Route path="/services/data-analytics" element={<DataAnalytics />} />
         <Route path="/services/monitoring-evaluation" element={<MonitoringEvaluation />} />
+        <Route path="/services/business-consultancy" element={<BusinessConsultancy />} />
       </Routes>
       <Footer />
     </Router>
