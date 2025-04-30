@@ -116,7 +116,7 @@ const Navbar = () => {
           )}
         </li>
 
-        {/* Profile Dropdown */}
+        {/* Profile Dropdown
         <li className="dropdown">
           <button onClick={toggleProfile} className="dropdown-toggle">
             <User />
@@ -138,7 +138,7 @@ const Navbar = () => {
               </li>
             </ul>
           )}
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
