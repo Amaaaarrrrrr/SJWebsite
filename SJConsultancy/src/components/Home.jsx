@@ -5,16 +5,33 @@ import './Home.css'; // Import the CSS file
 const Home = () => {
   const [activeFAQ, setActiveFAQ] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [currentTagline, setCurrentTagline] = useState(0);
+
+  const taglines = [
+    "Empowering Innovation and Technology",
+    "Your Partner in Business Growth",
+    "Transforming Ideas into Reality",
+    "Driving Success Through Data",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTagline((prevTagline) => (prevTagline + 1) % taglines.length);
+    }, 3000); // Change tagline every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [taglines.length]);
 
   const toggleFAQ = (index) => {
     setActiveFAQ(activeFAQ === index ? null : index);
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    setFormSubmitted(true); // Show the notification
-    setTimeout(() => setFormSubmitted(false), 3000); // Hide the notification after 3 seconds
+    e.preventDefault();
+    setFormSubmitted(true);
+    setTimeout(() => setFormSubmitted(false), 3000);
   };
+
 
   return (
     <div>
@@ -30,6 +47,8 @@ const Home = () => {
 
       {/* Logo Section */}
       <header className="logo-section text-center text-white">
+      {/* Logo Section */}
+      <header className="logo-section text-center text-white">
         <div className="overlay">
           <h1 className="text-4xl font-bold mb-4">BIZITEL SOLUTION</h1>
           <p className="text-lg mb-6 moving-text">WHAT WE DO... Empowering Growth, Innovation, and Success through Data-Driven Insights and Strategic Solutions.</p>
@@ -40,6 +59,15 @@ const Home = () => {
             <a href="/bookings" className="cta-button">Book Us Now</a>
             <a href="/contactus" className="cta-button">Contact Us</a>
             <a href="/portfolio" className="cta-button">Portfolio</a>
+            <a href="/bookings" className="cta-button">
+              Book Us Now
+            </a>
+            <a href="/contactus" className="cta-button">
+              Contact Us
+            </a>
+          </div>
+          <div class="scroll-indicator">
+            <span></span>
           </div>
         </div>
       </header>
@@ -89,6 +117,7 @@ const Home = () => {
             <h2 className="text-3xl font-bold text-navyBlue mb-6">About Us</h2>
             <p className="text-lg text-gray-700 mb-6">
               BIZITEL SOLUTION is a premier Research, Data Analytics, business development, and training firm specializing in SIYB (Start and Improve Your Business) training and Monitoring & Evaluation (M&E). Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making. We are committed to driving impactful, data-informed decisions that foster long-term success.
+            BIZITEL  SOLUTION is a premier  Research, Data Analytics, business development, and training firm specializing in SIYB (Start and Improve Your Business) training and Monitoring & Evaluation (M&E) . Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
             </p>
             <a
               href="/aboutus"
