@@ -13,6 +13,7 @@ import {
   Calendar,
   User,
   LogIn,
+  Search 
 } from 'lucide-react';
 
 const Navbar = () => {
@@ -88,6 +89,12 @@ const Navbar = () => {
         <Link to="/services/business-consultancy" onClick={closeMenu}>
           <Briefcase />
           Business Consultancy
+        </Link>
+      </li>
+      <li>
+        <Link to="/services/research" onClick={closeMenu}>
+          <Search />
+          Research
         </Link>
       </li>
     </ul>
