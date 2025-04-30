@@ -43,8 +43,7 @@ const AboutUs = () => {
           {/* About Us Description */}
           <div className="about-us-description-container">
             <p className="about-us-description-unique text-lg text-white mb-8 max-w-4xl mx-auto">
-              S.J Consultancy is a leading provider of business solutions, technology integration, and strategic consulting services. 
-              Our team of certified experts is dedicated to helping businesses grow through data-driven insights, actionable strategies, and hands-on support. We empower entrepreneurs, startups, and established organizations to unlock their full potential with personalized solutions tailored to their unique needs. Our goal is to drive lasting impact and tangible results in every project we undertake.
+            BIZITEL  SOLUTION is a premier  Research, Data Analytics, business development, and training firm specializing in SIYB (Start and Improve Your Business) training and Monitoring & Evaluation (M&E) . Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
             </p>
           </div>
         </div>

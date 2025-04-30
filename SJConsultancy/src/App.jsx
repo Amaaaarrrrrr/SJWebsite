@@ -10,8 +10,8 @@ import BlogDetails from './pages/BlogDetails';
 // import Register from './components/Register';
 // import UserProfile from './components/User';
 import BookingPage from './pages/BookingPage';
-import CaseStudies from "./pages/CaseStudies";
-import ContactUs from "./pages/ContactUs";
+import CaseStudies from './pages/CaseStudies';
+import ContactUs from './pages/ContactUs';
 import FAQPage from './pages/FAQPage';
 import PaymentPage from './pages/PaymentPage';
 import ProgramsPage from './pages/ProgramsPage';
@@ -20,12 +20,21 @@ import TestimonialPage from './pages/TestimonialPage';
 import AboutUs from './components/AboutUs';
 import AuthBar from './components/AuthBar';
 
+// New service pages
+import SiybTraining from './pages/SiybTraining';
+import DataAnalytics from './pages/DataAnalytics';
+import MonitoringEvaluation from './pages/MonitoringEvaluation';
+import BusinessConsultancy from './pages/BusinessConsultancy';
+import Research from './pages/Research';
+
+
 function App() {
   return (
     <Router>
       {/* <AuthBar /> */}
       <Navbar />
       <Routes>
+        {/* Main Routes */}
         <Route path="/" element={<Homepage />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/:id" element={<BlogDetails />} />
@@ -41,6 +50,13 @@ function App() {
         {/* <Route path="/auth" element={<AuthPage />} /> */}
         <Route path="/testimonials" element={<TestimonialPage />} />
         <Route path="/aboutus" element={<AboutUs />} />
+
+        {/* Service Routes */}
+        <Route path="/services/siyb-training" element={<SiybTraining />} />
+        <Route path="/services/data-analytics" element={<DataAnalytics />} />
+        <Route path="/services/monitoring-evaluation" element={<MonitoringEvaluation />} />
+        <Route path="/services/business-consultancy" element={<BusinessConsultancy />} />
+        <Route path="/services/research" element={<Research />} />
       </Routes>
       <Footer />
     </Router>
