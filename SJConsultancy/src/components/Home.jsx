@@ -103,7 +103,7 @@ const Home = () => {
     {/* Service 2 */}
     <div className="service-container flex flex-col items-start gap-6">
       <div className="service-text">
-        <h3 className="text-2xl font-semibold text-navyBlue mb-4">Training and Workshops</h3>
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">SIYB Training</h3>
         <p className="text-lg text-gray-700">
           We offer specialized training and workshops that focus on empowering your team with the skills and knowledge they need to thrive in today's dynamic business environment. Our hands-on, practical approach ensures that your employees are equipped with real-world solutions.
         </p>
@@ -126,6 +126,15 @@ const Home = () => {
         <h3 className="text-2xl font-semibold text-navyBlue mb-4">Data Analytics Setup</h3>
         <p className="text-lg text-gray-700">
           Our Data Analytics Setup service enables organizations to collect, process, and analyze data effectively. We provide comprehensive data strategies that help you make informed decisions, predict trends, and gain a competitive edge.
+        </p>
+      </div>
+    </div>
+     {/* Service 5 */}
+    <div className="service-container flex flex-col items-start gap-6">
+      <div className="service-text">
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">Research</h3>
+        <p className="text-lg text-gray-700">
+          Our Research services provide in-depth insights and analysis to help businesses make data-driven decisions. We specialize in market research, feasibility studies, and industry trend analysis to support your strategic goals.
         </p>
       </div>
     </div>
@@ -335,6 +344,8 @@ const Home = () => {
   {/* Contact Us Section */}
   <div className="contact-us-section bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Contact Us</h2>
+            <p>Do you have any more questions?</p>
+            <br />
             {formSubmitted && (
               <div className="bg-green-100 text-green-800 p-4 rounded-lg mb-4 text-center">
                 Thank you! Your message has been submitted.
