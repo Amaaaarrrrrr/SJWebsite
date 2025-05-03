@@ -4,45 +4,6 @@
 
 /* index.css */
 
-.affiliations-list {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  list-style: none; /* Remove dots */
-  overflow: hidden; /* Hide overflow for scrolling effect */
-  position: relative;
-  animation: scroll-center 3s linear infinite;
-}
-
-.affiliations-list img {
-  transition: all .3s ease;
-  max-width: 100px;
-  height: auto;
-  object-fit: contain;
-  margin: 0 auto;
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Keyframes for horizontal scrolling */
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Keyframes for floating effect on images */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
 
 /* ======================== */
 /* Global Styles */
@@ -1350,8 +1311,9 @@ section p {
 /* Case Studies Section */
 .case-studies-section {
   background-color: #F5F5F5; /* Light Grey */
-  padding: 60px 20px;
+  padding: 6px 20px;
   margin: 0;
+  height: auto;
  
 }
 
@@ -1579,6 +1541,7 @@ section p {
 /* About Us Section */
 /* About Us Title Container */
 .about-us-title-container {
+  height: 600px;
   position: relative; /* Set position to relative for the overlay */
   background-size: cover; /* Ensures the image covers the entire container */
   background-position: center; /* Centers the image */
@@ -1680,6 +1643,187 @@ section p {
     transform: translateY(0);
   }
 }
+.affiliations-container {
+  background-color: #005F56;; /* Light gray background */
+  padding: 40px 20px;
+  margin-top: 10px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.affiliations-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 20px;
+}
+.affiliations-description {
+  font-size: 1.125rem;
+  color: #ffffff; /* Medium Grey */
+  line-height: 1.8;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.affiliations-list {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  list-style: none; /* Remove default list styling */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  padding: 20px 0;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #005F56 #E8E8E8; /* Custom scrollbar colors */
+}
+
+.affiliations-list::-webkit-scrollbar {
+  height: 8px; /* Horizontal scrollbar height */
+}
+
+.affiliations-list::-webkit-scrollbar-thumb {
+  background-color: #005F56; /* Deep Green */
+  border-radius: 10px;
+}
+
+.affiliations-list::-webkit-scrollbar-track {
+  background-color: #E8E8E8; /* Light gray */
+}
+.affiliations-list img {
+  transition: all .3s ease;
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+  animation: float 3s ease-in-out infinite;
+}
+.affiliations-list img:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Keyframes for horizontal scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Keyframes for floating effect on images */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+/* Data Analytics Services Section */
+.data-analytics-services-container {
+  background-color: #FFFFFF; /* White background */
+  padding: 32px; /* Inner padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin: 48px auto; /* Center the section with spacing */
+  max-width: 800px; /* Limit the width */
+}
+
+.data-analytics-services-title {
+  font-size: 2rem; /* Large font size */
+  font-weight: bold;
+  color: #003366; /* Navy Blue */
+  margin-bottom: 24px; /* Spacing below the title */
+  text-align: center; /* Center the title */
+}
+
+.data-analytics-services-list {
+  list-style-type: disc; /* Bulleted list */
+  padding-left: 20px; /* Indent the list */
+  color: #555555; /* Medium Grey */
+  font-size: 1.125rem; /* Slightly larger font size */
+  line-height: 1.8; /* Improve readability */
+}
+
+.data-analytics-services-list li {
+  margin-bottom: 12px; /* Add spacing between list items */
+}
+
+.data-analytics-services-list li strong {
+  color: #005F56; /* Deep Green for emphasis */
+}
+
+/* Data Analytics Page */
+.data-analytics-page-container {
+  padding: 24px; /* Inner padding */
+  max-width: 80rem; /* Limit the width */
+  margin: 0 auto; /* Center the container */
+}
+
+.data-analytics-title {
+  font-size: 2.5rem; /* Large font size */
+  font-weight: bold;
+  color: #1E3A8A; /* Blue-800 */
+  margin-bottom: 16px; /* Space below the title */
+  text-align: center; /* Center the title */
+}
+
+.data-analytics-description {
+  font-size: 1.125rem; /* Slightly larger font size */
+  color: #4B5563; /* Gray-700 */
+  margin-bottom: 24px; /* Space below the description */
+  text-align: justify; /* Justify the text */
+}
+
+.data-analytics-content {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for small screens */
+  gap: 32px; /* Space between grid items */
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .data-analytics-content {
+    grid-template-columns: 1fr 1fr; /* Two columns for medium screens and above */
+  }
+}
+
+.data-analytics-services-list {
+  list-style-type: disc; /* Bulleted list */
+  padding-left: 20px; /* Indent the list */
+  color: #1F2937; /* Gray-800 */
+  font-size: 1rem; /* Standard font size */
+  line-height: 1.8; /* Improve readability */
+}
+
+.data-analytics-services-list li {
+  margin-bottom: 8px; /* Space between list items */
+}
+
+.data-analytics-images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between images */
+}
+
+.data-analytics-image {
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%; /* Full width */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.data-analytics-footer-text {
+  margin-top: 32px; /* Space above the footer text */
+  font-size: 0.875rem; /* Small font size */
+  color: #6B7280; /* Gray-600 */
+  font-style: italic; /* Italic text */
+  text-align: center; /* Center the footer text */
+}
 /* Values Section Container */
 .about-us-values-container {
   background-color: #005F56; /* Light gray background */
@@ -1714,16 +1858,6 @@ section p {
   position: relative;
 }
 
-/* Add a Decorative Icon or Bullet */
-.about-us-values-list-unique li::before {
-  content: "•";
-  font-size: 1.2rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(5px);
-  color: #FFD700; /* Gold bullet */
-}
 
 /* Highlight Key Words */
 .about-us-values-list-unique li strong {
@@ -1732,8 +1866,10 @@ section p {
 }
 .about-us-values-list-unique li:hover {
   color: #93dfd7; /* Deep Green */
-  text-decoration: underline;
+  font-weight: bold;
 }
+
+
 
 /* Team Section Container */
 .about-us-team-container {
@@ -1850,6 +1986,7 @@ section p {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 /* CTA Title */
@@ -2294,7 +2431,7 @@ section p {
 .case-studies-section {
   background-color: #F9F9F9; /* Light gray background */
   padding: 3rem 1rem;
-  min-height: 100vh; /* Full screen height */
+  height: 700px;
 }
 
 .case-studies-container {
@@ -2756,4 +2893,856 @@ section p {
 .user-profile-form-input:focus {
   border-color: #005F56; /* Deep Green on focus */
   box-shadow: 0 0 0 3px rgba(0, 95, 86, 0.2); /* Green focus ring */
+}
+
+/* SIYB Training Page */
+.siyb-training-page {
+  padding: 24px; /* Inner padding */
+  max-width: 72rem; /* Limit the width */
+  margin: 0 auto; /* Center the container */
+  space-y: 40px; /* Vertical spacing between sections */
+}
+
+.siyb-training-title {
+  font-size: 2.5rem; /* Large font size */
+  font-weight: bold;
+  color: #047857; /* Green-700 */
+  margin-bottom: 16px; /* Space below the title */
+  text-align: center; /* Center the title */
+}
+
+/* Framework Section */
+.siyb-framework-section {
+  margin-bottom: 40px; /* Space below the section */
+  background-color: #047857;
+  border-radius: 20px;
+}
+
+.siyb-framework-title {
+  font-size: 1.875rem; /* Medium font size */
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.siyb-framework-description {
+  font-size: 1.125rem; /* Slightly larger font size */
+  color: #ffffff; /* Gray-700 */
+  font-weight: bold;
+  line-height: 1.8; /* Improve readability */
+}
+
+.siyb-framework-link {
+  color: #00b7ff; /* Green-600 */
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+/* Training Types Section */
+.siyb-training-types-section {
+  margin-bottom: 40px;
+}
+
+.siyb-training-types-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.siyb-training-types-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #1F2937; /* Gray-800 */
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Target Audience Section */
+.siyb-target-audience-section {
+  margin-bottom: 40px; /* Space below the section */
+  background-color: #047857;
+  border-radius: 20px;
+}
+
+.siyb-target-audience-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.siyb-target-audience-description {
+  font-size: 1rem;
+  color: #ffffff; /* Gray-700 */
+  font-weight: bold;
+}
+
+.siyb-target-audience-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+  margin-top: 8px;
+  color: #ffffff; /* Gray-800 */
+}
+
+/* Schedule Section */
+.siyb-schedule-section {
+  margin-bottom: 40px;
+}
+
+.siyb-schedule-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.siyb-schedule-description {
+  font-size: 1rem;
+  color: #4B5563;
+  margin-bottom: 16px;
+}
+
+
+.siyb-schedule-list {
+  background-color: #F3F4F6; /* Gray-100 */
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.siyb-register-button {
+  display: inline-block;
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding: 12px 24px;
+  background-color: #047857; /* Green-600 */
+  color: #FFFFFF; /* White */
+  font-weight: 600;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.siyb-register-button:hover {
+  background-color: #065F46; /* Green-700 */
+  color: #ffd23c;
+}
+
+/* Testimonials Section */
+.siyb-testimonials-section {
+  margin-bottom: 40px;
+}
+
+.siyb-testimonials-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.siyb-testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .siyb-testimonials-grid {
+    grid-template-columns: 1fr 1fr; /* Two columns for medium screens and above */
+  }
+}
+
+.siyb-testimonial {
+  background-color: #FFFFFF; /* White */
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border-left: 4px solid #047857; /* Green-600 */
+  font-style: italic;
+  color: #4B5563; /* Gray-700 */
+}
+
+.siyb-testimonial-author {
+  margin-top: 8px;
+  font-weight: bold;
+  color: #047857; /* Green-700 */
+}
+
+/* Online Training Section */
+.siyb-online-training-section {
+  margin-bottom: 40px;
+}
+
+.siyb-online-training-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.siyb-online-training-description {
+  font-size: 1rem;
+  color: #4B5563; /* Gray-700 */
+}
+
+.siyb-online-training-button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #065F46; /* Blue-600 */
+  color: #FFFFFF; /* White */
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.siyb-online-training-button:hover {
+  background-color: #005F56; /* Blue-700 */
+  color: #ffd23c;
+}
+
+/* Visuals Section */
+.siyb-visuals-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .siyb-visuals-section {
+    grid-template-columns: 1fr 1fr; /* Two columns for medium screens and above */
+  }
+}
+
+.siyb-visual {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Training Journey Timeline */
+.training-journey-container {
+  margin: 64px 0; /* Vertical spacing */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column; 
+  position: relative;
+  padding: 16px; /* Inner padding */
+}
+
+.training-journey-title {
+  font-size: 1.875rem; /* Medium font size */
+  font-weight: 600;
+  margin-bottom: 40px; /* Space below the title */
+  text-align: center;
+  color: #1F2937; /* Gray-800 */
+}
+
+/* Timeline Line */
+.training-journey-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #86EFAC; /* Green-300 */
+  transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .training-journey-line {
+    left: 15%;
+    top: 50%;
+    bottom: auto;
+    width: 100%;
+    height: 4px;
+    transform: translateY(-50%);
+  }
+}
+
+/* Steps Container */
+.training-journey-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 48px; /* Space between steps */
+}
+
+@media (min-width: 768px) {
+  .training-journey-steps {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+/* Step Card */
+.training-journey-step {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 300px;
+  background-color: #FFFFFF; /* White */
+  padding: 24px;
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  border: 1px solid #D1FAE5; /* Green-100 */
+  text-align: center;
+}
+
+.training-journey-step-icon {
+  margin-bottom: 16px;
+}
+
+.training-journey-step-title {
+  font-size: 1.25rem; /* Large font size */
+  font-weight: bold;
+  color: #1F2937; /* Gray-800 */
+}
+
+.training-journey-step-description {
+  font-size: 1rem;
+  color: #6B7280; /* Gray-600 */
+  margin-top: 8px;
+}
+
+/* Connecting Dots */
+.training-journey-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #22C55E; /* Green-500 */
+  border-radius: 50%;
+  border: 4px solid #FFFFFF; /* White border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.training-journey-dot-mobile {
+  left: -20px;
+  top: 28px;
+}
+
+.training-journey-dot-desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .training-journey-dot-mobile {
+    display: none;
+  }
+
+  .training-journey-dot-desktop {
+    display: block;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Monitoring & Evaluation Page */
+.monitoring-evaluation-page {
+  padding: 48px 24px;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.monitoring-evaluation-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #065F46; /* Green-800 */
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.monitoring-evaluation-description {
+  font-size: 1.125rem;
+  color: #4B5563; /* Gray-700 */
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* Service Cards */
+.monitoring-evaluation-service-card {
+  background-color: #FFFFFF;
+  border: 1px solid #D1FAE5; /* Green-100 */
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: start;
+  gap: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.monitoring-evaluation-service-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.monitoring-evaluation-service-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1F2937; /* Gray-800 */
+}
+
+.monitoring-evaluation-service-card-description {
+  font-size: 1rem;
+  color: #6B7280; /* Gray-600 */
+}
+
+/* Image + Process Section */
+.monitoring-evaluation-process {
+  display: flex;
+  margin-top: 20px;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .monitoring-evaluation-process {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.monitoring-evaluation-image {
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 50%;
+}
+
+.monitoring-evaluation-process-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.monitoring-evaluation-process-list-item {
+  font-size: 1rem;
+  color: #4B5563; /* Gray-700 */
+  margin-bottom: 12px;
+}
+
+.monitoring-evaluation-process-list-item strong {
+  color: #065F46; /* Green-800 */
+}
+
+/* Testimonials Section */
+.monitoring-evaluation-testimonials {
+  background-color: #F0FDF4; /* Green-50 */
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.monitoring-evaluation-testimonials-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #065F46; /* Green-800 */
+  margin-bottom: 24px;
+}
+
+.monitoring-evaluation-testimonials-text {
+  font-size: 1rem;
+  color: #4B5563; /* Gray-700 */
+  font-style: italic;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.monitoring-evaluation-testimonials-author {
+  font-weight: bold;
+  font-style: normal;
+  font-size: 0.875rem;
+  color: #1F2937; /* Gray-800 */
+  display: block;
+  margin-top: 8px;
+}
+
+/* Call-to-Action (CTA) Section */
+.monitoring-evaluation-cta {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.monitoring-evaluation-cta-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F2937; /* Gray-800 */
+  margin-bottom: 16px;
+}
+
+.monitoring-evaluation-cta-button {
+  background-color: #047857; /* Green-600 */
+  color: #FFFFFF; /* White */
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.monitoring-evaluation-cta-button:hover {
+  background-color: #065F46; /* Green-700 */
+  transform: scale(1.05);
+  color: #ffd23c; /* Gold */
+}
+/* Business Consultancy Page */
+.business-consultancy-page {
+  padding: 48px 24px;
+  background-color: #F9FAFB; /* Light gray background */
+}
+
+/* Hero Section */
+.business-consultancy-hero {
+  text-align: center;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.business-consultancy-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #003764; /* Blue-800 */
+  margin-bottom: 16px;
+}
+
+.business-consultancy-description {
+  font-size: 1.125rem;
+  color: #4B5563; /* Gray-700 */
+}
+
+/* Services Section */
+.business-consultancy-services-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #003764; /* Gray-800 */
+  margin-bottom: 24px;
+}
+
+.business-consultancy-services-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.business-service-card {
+  background-color: #FFFFFF; /* White */
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.business-service-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.business-service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F2937; /* Gray-800 */
+}
+
+.business-service-description {
+  font-size: 1rem;
+  color: #6B7280; /* Gray-600 */
+}
+
+/* Testimonials Section */
+.business-consultancy-testimonials {
+  background-color: #eefdf5; /* Blue-50 */
+  padding: 40px 24px;
+  border-radius: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.business-consultancy-testimonials-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #003366; /* Blue-700 */
+  margin-bottom: 24px;
+}
+
+.business-testimonial {
+  font-size: 1rem;
+  color: #4B5563; /* Gray-700 */
+  font-style: italic;
+}
+
+.business-testimonial-author {
+  font-weight: bold;
+  color: #2563EB; /* Blue-600 */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Visual Section */
+.business-consultancy-visual-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #003366; /* Gray-800 */
+  margin-bottom: 16px;
+}
+
+.business-consultancy-visual-image {
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 48rem;
+}
+
+.business-consultancy-visual-description {
+  font-size: 1rem;
+  color: #6B7280; /* Gray-600 */
+  margin-top: 16px;
+}
+
+/* Call to Action */
+.business-consultancy-cta-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #003366;; /* Gray-800 */
+  margin-bottom: 16px;
+}
+
+.business-consultancy-cta-button {
+  background-color: #005F56; /* Blue-600 */
+  color: #FFFFFF; /* White */
+  padding: 12px 24px;
+  border-radius: 9999px; /* Fully rounded */
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.business-consultancy-cta-button:hover {
+  background-color: #008080; /* Blue-700 */
+  transform: scale(1.05);
+  color: #ffd23c; /* Gold */
+  text-decoration: none;
+}
+
+/* Graph Section */
+.graph-section {
+  height: auto;
+  padding: 48px 16px; /* Top/Bottom and Left/Right padding */
+  background-color: #F9FAFB; /* Light gray background */
+}
+
+.graph-section h2 {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: bold;
+  text-align: center;
+  color: #1E3A8A; /* Navy Blue */
+  margin-bottom: 24px; /* Space below the heading */
+}
+
+.graph-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #FFFFFF; /* White background */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Prevent overflow of content */
+}
+
+.graph-container canvas {
+  max-width: 100%; /* Ensure the chart is responsive */
+  height: 200px; /* Maintain aspect ratio */
+}
+
+/* Research Page */
+.research-page {
+  padding: 24px;
+  max-width: 72rem;
+  
+  margin: 0 auto;
+  space-y: 32px;
+}
+
+/* Header Section */
+.research-header {
+  text-align: center;
+  border-radius: 20px;
+}
+
+.research-title {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: bold;
+  color: #ffffff; /* Gray-800 */
+}
+
+.research-subtitle {
+  margin-top: 8px;
+  font-size: 1rem; /* Base */
+  color: #ffffff; /* Gray-800 */
+}
+
+/* Analytics Section */
+.research-analytics-section {
+  margin-bottom: 32px;
+}
+
+.research-analytics-title {
+  font-size: 1.5rem; /* 2xl */
+  font-weight: 600;
+  color: #003366; /* Gray-800 */
+  margin-bottom: 16px;
+}
+
+.research-analytics-chart {
+  padding: 16px;
+  background-color: #FFFFFF; /* White */
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Services Section */
+.research-services-section {
+  margin-bottom: 32px;
+}
+
+.research-services-title {
+  font-size: 1.5rem; /* 2xl */
+  font-weight: 600;
+  color: #003366; /* Gray-800 */
+  margin-bottom: 16px;
+}
+
+.research-services-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #4B5563; /* Gray-700 */
+  font-size: 1rem; /* Base */
+}
+
+/* Research Papers Section */
+.research-papers-section {
+  margin-bottom: 32px;
+}
+.research-paper:hover{
+  background-color: #E5E7EB; /* Gray-200 */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.research-papers-title {
+  font-size: 1.5rem; /* 2xl */
+  font-weight: 600;
+  color: #003366; /* Gray-800 */
+  margin-bottom: 16px;
+}
+
+.research-papers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.research-paper {
+  padding: 16px;
+  background-color: #F9FAFB; /* Light gray */
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+
+.research-paper-title {
+  font-size: 1.125rem; /* lg */
+  font-weight: 500;
+  color: #003366; /* Gray-800 */
+}
+
+.research-paper-description {
+  font-size: 0.875rem; /* sm */
+  color: #6B7280; /* Gray-600 */
+  margin-top: 8px;
+}
+
+/* Programs Section */
+.programs-section {
+  background-color: #F9FAFB; /* Light gray background */
+  padding: 48px 16px; /* Top/Bottom and Left/Right padding */
+  min-height: 100vh; /* Full screen height */
+}
+
+.programs-container {
+  max-width: 72rem; /* Limit the width */
+  margin: 0 auto; /* Center the container */
+}
+
+.programs-title {
+  font-size: 2.5rem; /* 4xl */
+  font-weight: bold;
+  text-align: center;
+  color: #1E3A8A; /* Navy Blue */
+  margin-bottom: 48px; /* Space below the title */
+}
+
+/* Programs Grid */
+.programs-grid {
+  display: grid;
+  gap: 32px; /* Space between grid items */
+}
+
+/* Program Card */
+.program-card {
+  background-color: #FFFFFF; /* White background */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensure content stays within the card */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.program-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Larger shadow on hover */
+  transform: translateY(-4px); /* Slight lift on hover */
+}
+
+.program-card-image {
+  width: 100%;
+  height: 12rem; /* Fixed height for images */
+  object-fit: cover; /* Ensure the image covers the area */
+}
+
+.program-card-content {
+  padding: 24px; /* Inner padding */
+}
+
+.program-card-title {
+  font-size: 1.5rem; /* 2xl */
+  font-weight: 600;
+  color: #1E3A8A; /* Navy Blue */
+  margin-bottom: 16px; /* Space below the title */
+}
+
+.program-card-description {
+  font-size: 1rem; /* Base */
+  color: #6B7280; /* Gray-600 */
+  margin-bottom: 24px; /* Space below the description */
+}
+
+.program-card-button {
+  background-color: #047857; /* Deep Green */
+  color: #FFFFFF; /* White text */
+  padding: 12px 24px; /* Button padding */
+  border-radius: 9999px; /* Fully rounded button */
+  font-size: 1rem; /* Base */
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.program-card-button:hover {
+  background-color: #0D9488; /* Teal */
+  transform: scale(1.05); /* Slightly enlarge on hover */
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BusinessAnalyticsChart from '../components/BusinessAnalyticsChart';
 
 const Home = () => {
   const [activeFAQ, setActiveFAQ] = useState(null);
@@ -183,9 +184,9 @@ const Home = () => {
 
 
 {/* Case Studies Section */}
-<section className="case-studies-section py-12 px-4 md:px-12">
+<section className="case-studies-section ">
   <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Case Studies</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {/* Case Study 1 */}
     <div className="case-study bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
       <img src="/case1.jpeg" alt="Case Study 1" className="rounded-lg mb-4" />
@@ -223,6 +224,15 @@ const Home = () => {
     </div>
   </div>
 </section>
+<section className="graph-section py-12 px-4 md:px-12">
+  <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Data Analytics Overview</h2>
+  <div className="graph-container">
+    <BusinessAnalyticsChart />
+  </div>
+</section>
+
+
+
 {/* FAQs and Contact Us Section */}
 <section className="faqs-contact-section py-12 px-4 md:px-12 bg-lightGray">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">

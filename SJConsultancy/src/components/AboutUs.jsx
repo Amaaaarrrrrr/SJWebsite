@@ -50,7 +50,7 @@ const AboutUs = () => {
 
       {/* Affiliations/Partnerships Section */}
       <div className="affiliations-container bg-white p-8 rounded-lg shadow-md my-12 text-left max-w-4xl mx-auto">
-<h2 className="affiliations-title text-3xl font-bold text-navyBlue mb-6 text-center">Affiliations & Partnerships</h2>
+        <h2 className="affiliations-title text-3xl font-bold text-navyBlue mb-6 text-center">Affiliations & Partnerships</h2>
         <p className="affiliations-description text-lg text-gray-700 mb-4">
           We proudly collaborate with a diverse range of organizations to enhance our impact and deliver exceptional value to our clients. Our key affiliations and partnerships include:
         </p>
@@ -84,19 +84,51 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Data Analytics Services Section */}
-      <div className="data-analytics-services-container bg-white p-8 rounded-lg shadow-md my-12 text-left max-w-4xl mx-auto">
-        <h2 className="data-analytics-services-title text-3xl font-bold text-navyBlue mb-6">Data Analytics Services</h2>
-        <ul className="data-analytics-services-list list-disc list-inside text-gray-700 space-y-3 text-lg">
-          <li><strong>Business Intelligence & Dashboards:</strong> Power BI, Tableau, Excel</li>
-          <li><strong>Data Cleaning & Preparation</strong></li>
-          <li><strong>Predictive Analytics & Machine Learning</strong></li>
-          <li><strong>M&E (Monitoring & Evaluation) Data Solutions</strong></li>
-          <li><strong>Case Studies or Client Success Stories</strong></li>
-          <li><strong>Tools and Technologies Used</strong></li>
-          <li><strong>Industries Served:</strong> Agriculture, Health, Education, SMEs, etc.</li>
-        </ul>
-      </div>
+     {/* Data Analytics Services Section */}
+<div className="data-analytics-services-container bg-white p-8 rounded-lg shadow-md my-12 text-left max-w-4xl mx-auto">
+  <h2 className="data-analytics-services-title text-3xl font-bold text-navyBlue mb-6">Data Analytics Services</h2>
+  <p className="text-lg text-gray-700 mb-6">
+    Our Data Analytics services are designed to help businesses unlock the power of their data. From data preparation to advanced analytics, we provide end-to-end solutions tailored to your needs.
+  </p>
+  <ul className="data-analytics-services-list list-disc list-inside text-gray-700 space-y-4 text-lg">
+    <li>
+      <strong>Business Intelligence & Dashboards:</strong> 
+      Transform raw data into actionable insights using tools like Power BI, Tableau, and Excel. Create interactive dashboards to monitor key performance indicators (KPIs) in real-time.
+    </li>
+    <li>
+      <strong>Data Cleaning & Preparation:</strong> 
+      Ensure your data is accurate, consistent, and ready for analysis by removing errors, duplicates, and inconsistencies.
+    </li>
+    <li>
+      <strong>Predictive Analytics & Machine Learning:</strong> 
+      Leverage advanced algorithms to forecast trends, identify patterns, and make data-driven decisions that give you a competitive edge.
+    </li>
+    <li>
+      <strong>M&E (Monitoring & Evaluation) Data Solutions:</strong> 
+      Design and implement robust frameworks to track project performance, measure outcomes, and evaluate impact.
+    </li>
+    <li>
+      <strong>Case Studies or Client Success Stories:</strong> 
+      Explore real-world examples of how our data analytics solutions have helped businesses achieve measurable results.
+    </li>
+    <li>
+      <strong>Tools and Technologies Used:</strong> 
+      We utilize cutting-edge tools such as Python, R, SQL, Power BI, Tableau, and cloud platforms like AWS and Azure.
+    </li>
+    <li>
+      <strong>Industries Served:</strong> 
+      Our expertise spans multiple industries, including Agriculture, Health, Education, Retail, and SMEs.
+    </li>
+  </ul>
+  <div className="text-center mt-6">
+    <a 
+      href="/services/data-analytics" 
+      className="bg-deepGreen text-white py-3 px-6 rounded-full hover:bg-teal transition"
+    >
+      Learn More About Our Data Analytics Services
+    </a>
+  </div>
+</div>
 
       {/* Values Section */}
       <div className="about-us-values-container text-center mb-12">
