@@ -33,9 +33,22 @@ const Home = () => {
 
   return (
     <div>
-      {/* Logo Section */}
-      <header className="logo-section text-center text-white">
-        <div className="overlay">
+      
+      <header className="logo-section relative text-center text-white overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="logo-section-video absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/Background-Video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay Content */}
+        <div className="logo-section-overlay relative z-10 flex flex-col justify-center items-center h-full bg-black bg-opacity-50">
           <h1 className="text-4xl font-bold mb-4">BIZITEL SOLUTION</h1>
           <p className="text-lg mb-6">{taglines[currentTagline]}</p>
           <div className="cta-buttons">
@@ -46,12 +59,11 @@ const Home = () => {
               Contact Us
             </a>
           </div>
-          <div class="scroll-indicator">
+          <div className="scroll-indicator mt-10">
             <span></span>
           </div>
         </div>
       </header>
-
     {/* About Us Section */}
     <section className="about-us-section py-12 px-4 md:px-12">
         <div className="about-us-container">
