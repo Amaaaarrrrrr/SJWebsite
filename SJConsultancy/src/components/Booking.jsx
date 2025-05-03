@@ -114,6 +114,39 @@ function Booking() {
               required
               className="booking-form-input w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal"
             />
+            {/* Preferred Time Slot */}
+<div className="booking-form-group mb-4">
+  <label className="booking-form-label block text-gray-700 mb-2">Preferred Time Slot</label>
+  <select
+    name="time"
+    value={formData.time}
+    onChange={handleChange}
+    className="booking-form-select w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-deepGreen"
+    required
+  >
+    <option value="">-- Select Time --</option>
+    <option value="9:00AM - 10:00AM">9:00AM - 10:00AM</option>
+    <option value="10:00AM - 11:00AM">10:00AM - 11:00AM</option>
+    <option value="11:00AM - 12:00PM">11:00AM - 12:00PM</option>
+  </select>
+</div>
+
+{/* Booking As: Individual or Company */}
+<div className="booking-form-group mb-6">
+  <label className="booking-form-label block text-gray-700 mb-2">Booking As</label>
+  <select
+    name="organization"
+    value={formData.organization}
+    onChange={handleChange}
+    className="booking-form-select w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-deepGreen"
+    required
+  >
+    <option value="">-- Select --</option>
+    <option value="Individual">Individual</option>
+    <option value="Company">Company</option>
+  </select>
+</div>
+
           </div>
 
           <button

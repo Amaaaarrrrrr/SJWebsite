@@ -1,34 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import BusinessAnalyticsChart from '../components/BusinessAnalyticsChart';
 
 const Home = () => {
   const [activeFAQ, setActiveFAQ] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [currentTagline, setCurrentTagline] = useState(0);
+
+  const taglines = [
+    "Empowering Innovation and Technology",
+    "Your Partner in Business Growth",
+    "Transforming Ideas into Reality",
+    "Driving Success Through Data",
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTagline((prevTagline) => (prevTagline + 1) % taglines.length);
+    }, 3000); // Change tagline every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
+  }, [taglines.length]);
 
   const toggleFAQ = (index) => {
     setActiveFAQ(activeFAQ === index ? null : index);
   };
 
   const handleFormSubmit = (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
-    setFormSubmitted(true); // Show the notification
-    setTimeout(() => setFormSubmitted(false), 3000); // Hide the notification after 3 seconds
+    e.preventDefault();
+    setFormSubmitted(true);
+    setTimeout(() => setFormSubmitted(false), 3000);
   };
+
   return (
     <div>
       
-      {/* Logo Section */}
-     {/* Logo Section */}
-     <header className="logo-section text-center text-white">
-        <div className="overlay">
-          <h1 className="text-4xl font-bold mb-4">S.J Consultancy</h1>
-          <p className="text-lg mb-6">Empowering Innovation and Technology</p>
+      <header className="logo-section relative text-center text-white overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="logo-section-video absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src="/Background-Video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        {/* Overlay Content */}
+        <div className="logo-section-overlay relative z-10 flex flex-col justify-center items-center h-full bg-black bg-opacity-50">
+          <h1 className="text-4xl font-bold mb-4">BIZITEL SOLUTION</h1>
+          <p className="text-lg mb-6">{taglines[currentTagline]}</p>
           <div className="cta-buttons">
-            <a href="/bookings" className="cta-button">Book Us Now</a>
-            <a href="/contactus" className="cta-button">Contact Us</a>
+            <a href="/bookings" className="cta-button">
+              Book Us Now
+            </a>
+            <a href="/contactus" className="cta-button">
+              Contact Us
+            </a>
+          </div>
+          <div className="scroll-indicator mt-10">
+            <span></span>
           </div>
         </div>
       </header>
-
     {/* About Us Section */}
     <section className="about-us-section py-12 px-4 md:px-12">
         <div className="about-us-container">
@@ -46,7 +81,7 @@ const Home = () => {
           <div className="about-us-info">
             <h2 className="text-3xl font-bold text-navyBlue mb-6">About Us</h2>
             <p className="text-lg text-gray-700 mb-6">
-              S.J Consultancy is a premier business development and training firm specializing in SIYB (Start and Improve Your Business) training, Data Analytics, and Monitoring & Evaluation (M&E) Research. Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
+            BIZITEL  SOLUTION is a premier  Research, Data Analytics, business development, and training firm specializing in SIYB (Start and Improve Your Business) training and Monitoring & Evaluation (M&E) . Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
             </p>
             <a
               href="/aboutus"
@@ -81,7 +116,7 @@ const Home = () => {
     {/* Service 2 */}
     <div className="service-container flex flex-col items-start gap-6">
       <div className="service-text">
-        <h3 className="text-2xl font-semibold text-navyBlue mb-4">Training and Workshops</h3>
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">SIYB Training</h3>
         <p className="text-lg text-gray-700">
           We offer specialized training and workshops that focus on empowering your team with the skills and knowledge they need to thrive in today's dynamic business environment. Our hands-on, practical approach ensures that your employees are equipped with real-world solutions.
         </p>
@@ -104,6 +139,15 @@ const Home = () => {
         <h3 className="text-2xl font-semibold text-navyBlue mb-4">Data Analytics Setup</h3>
         <p className="text-lg text-gray-700">
           Our Data Analytics Setup service enables organizations to collect, process, and analyze data effectively. We provide comprehensive data strategies that help you make informed decisions, predict trends, and gain a competitive edge.
+        </p>
+      </div>
+    </div>
+     {/* Service 5 */}
+    <div className="service-container flex flex-col items-start gap-6">
+      <div className="service-text">
+        <h3 className="text-2xl font-semibold text-navyBlue mb-4">Research</h3>
+        <p className="text-lg text-gray-700">
+          Our Research services provide in-depth insights and analysis to help businesses make data-driven decisions. We specialize in market research, feasibility studies, and industry trend analysis to support your strategic goals.
         </p>
       </div>
     </div>
@@ -152,9 +196,9 @@ const Home = () => {
 
 
 {/* Case Studies Section */}
-<section className="case-studies-section py-12 px-4 md:px-12">
+<section className="case-studies-section ">
   <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Case Studies</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {/* Case Study 1 */}
     <div className="case-study bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition">
       <img src="/case1.jpeg" alt="Case Study 1" className="rounded-lg mb-4" />
@@ -192,6 +236,15 @@ const Home = () => {
     </div>
   </div>
 </section>
+<section className="graph-section py-12 px-4 md:px-12">
+  <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Data Analytics Overview</h2>
+  <div className="graph-container">
+    <BusinessAnalyticsChart />
+  </div>
+</section>
+
+
+
 {/* FAQs and Contact Us Section */}
 <section className="faqs-contact-section py-12 px-4 md:px-12 bg-lightGray">
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -313,6 +366,8 @@ const Home = () => {
   {/* Contact Us Section */}
   <div className="contact-us-section bg-white p-6 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold text-center text-navyBlue mb-6">Contact Us</h2>
+            <p>Do you have any more questions?</p>
+            <br />
             {formSubmitted && (
               <div className="bg-green-100 text-green-800 p-4 rounded-lg mb-4 text-center">
                 Thank you! Your message has been submitted.
