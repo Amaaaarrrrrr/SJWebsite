@@ -35,17 +35,18 @@ const AboutUs = () => {
   ];
 
   return (
-    <div className="about-us-container-unique max-w-6xl mx-auto text-center">
-      {/* Section Title */}
-      <div className="about-us-title-container bg-cover bg-center py-16 px-4 rounded-lg shadow-md" style={{ backgroundImage: "url('/aboutbkg.jpg')" }}>
-        <h1 className="about-us-title-unique text-4xl font-bold text-white mb-6">About Us</h1>
-        {/* About Us Description */}
-        <div className="about-us-description-container">
-          <p className="about-us-description-unique text-lg text-white mb-8 max-w-4xl mx-auto">
-          BIZITEL  SOLUTION is a premier  Research, Data Analytics, business development, and training firm specializing in SIYB (Start and Improve Your Business) training and Monitoring & Evaluation (M&E) . Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
-          </p>
+    
+      <div className="about-us-container-unique max-w-6xl mx-auto text-center">
+        {/* Section Title */}
+        <div className="about-us-title-container bg-cover bg-center py-16 px-4 rounded-lg shadow-md" style={{ backgroundImage: "url('/aboutbkg.jpg')" }}>
+          <h1 className="about-us-title-unique text-4xl font-bold text-white mb-6">About Us</h1>
+          {/* About Us Description */}
+          <div className="about-us-description-container">
+            <p className="about-us-description-unique text-lg text-white mb-8 max-w-4xl mx-auto">
+            BIZITEL  SOLUTION is a premier  Research, Data Analytics, business development, and training firm specializing in SIYB (Start and Improve Your Business) training and Monitoring & Evaluation (M&E) . Our mission is to empower entrepreneurs, businesses, and organizations with the skills, knowledge, and tools necessary for sustainable growth and decision-making.
+            </p>
+          </div>
         </div>
-      </div>
 
       {/* Affiliations/Partnerships Section */}
       <div className="affiliations-container bg-white p-8 rounded-lg shadow-md my-12 text-left max-w-4xl mx-auto">
