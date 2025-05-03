@@ -446,7 +446,7 @@ html, body {
   display: flex;
   justify-content: center; /* Center the entire nav bar content horizontally */
   align-items: center;
-  background-color: #005F56; /* Deep Green */
+  background-color: #003764; /* Deep Green */
   padding: 15px 30px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -564,7 +564,7 @@ html, body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #008080; /* Teal */
+  background-color: #003764; /* Teal */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   overflow: hidden;
