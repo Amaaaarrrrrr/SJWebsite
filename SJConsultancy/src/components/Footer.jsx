@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer-item">
           <h3>About Us</h3>
           <p>
-            SJ Consultancy provides expert training and consulting services to help businesses grow and succeed.
+            Bizitel Solutions provides expert training and consulting services to help businesses grow and succeed.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-copyright">
-        <p>&copy; {new Date().getFullYear()} SJ Consultancy. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Bizitel Solutions. All rights reserved.</p>
       </div>
     </footer>
   );
