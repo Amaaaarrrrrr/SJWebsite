@@ -12,7 +12,7 @@ const data = [
 const CustomerGrowthChart = () => {
   return (
     <div className="mt-8">
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Customer Growth Over Time</h2>
+      <h1 className="data-analytics-title text-4xl font-bold text-blue-800 mb-4">Customer Growth Over Time</h1>
       <ResponsiveContainer width="100%" height={300}>
         <BarChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" />
